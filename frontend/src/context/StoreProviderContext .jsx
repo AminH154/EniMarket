@@ -8,7 +8,10 @@ export const storeContext = createContext(null);
 
 function StoreProviderContext (props) {
 
-    contextValue={}
+    const contextValue = {
+        // Add your desired context values here
+        exampleKey: "exampleValue"
+    };
 
 
 
