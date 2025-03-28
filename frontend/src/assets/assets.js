@@ -28,8 +28,9 @@ import sms from "./sms.png";
 import telephone_portable from "./telephone-portable.png";
 import twitter_icon from "./twitter_icon.png";
 import utilisateur from "./utilisateur.png";
-
+import reset from "./reset.png";
 export const assets = {
+  reset,
   search,
   add_icon_green,
   add_icon_white,
