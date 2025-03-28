@@ -7,17 +7,17 @@ const navbar = () => {
   return(
     <div className="navbar">
       <div className="navbar_right">
-        <img src={assets.logo} alt="" className="logo" />
+        <h1 className="logo">UniMarket </h1>
 
       </div>
       <div className="navbar_center">
         <div className="navbar_centre_box">
           <div className="box_item-right">
-            <img src={assets.search1_icon} alt="" />
+            <img src={assets.search} alt="" className="search" />
           
           </div>
           <div className="box_item-centre">
-            <h1>Recherche sur UniMarket</h1>
+               <input type="text" placeholder="Recherche sur UniMarket" class="main-search"/>
             <p>votre récente reacherche:pasde recherche recentes</p>
           </div>
           

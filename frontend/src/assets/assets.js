@@ -16,6 +16,7 @@ import github from "./github.png";
 import header from "./header.png";
 import idee from "./idee.png";
 import linkedin from "./linkedin.png";
+import search from "./search.png";
 import logo from "./logo.png";
 import logout_icon from "./logout_icon.png";
 import recharge from "./recharge.png";
@@ -29,6 +30,7 @@ import twitter_icon from "./twitter_icon.png";
 import utilisateur from "./utilisateur.png";
 
 export const assets = {
+  search,
   add_icon_green,
   add_icon_white,
   app_store,
