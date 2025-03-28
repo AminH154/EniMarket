@@ -5,14 +5,17 @@ const Header = () => {
   return (
     <div className="header">
       <div className="hader_left">
-        <div className="filtre_contaier">
           <div className="fitre_header">
+            <div className="fitre_header_left">
             <h4>Fitre avancés</h4>
-            <button className="reset-btn">
-              <i className="fas fa-sync-alt">Réinitailiser</i>
-            </button>
+            </div>
+            <div className="fitre_header_right">
+               <img src={assets.reset} alt="" />
+               <i className="fas fa-sync-alt">Réinitailiser</i>
+            </div>
+            
+         
           </div>
-          <label> prix (DT)</label>
           <div className="price-range">
             <input type="number" name="Minimum" id="" placeholder="Minimum" />
             <input type="number" name="Maximum" id=""  placeholder="Maximum"/>
@@ -21,14 +24,16 @@ const Header = () => {
             <option value="catégory">Catégory</option>
           </select>
           <select>
-            <option value="sous catégory">Catégory</option>
+            <option value="sous catégory">Sous Catégory</option>
           </select>
-          <label>État de produit :</label>
+         
           <div class="filter-footer">
-            <button class="filter-btn"><i class="fas fa-filter"></i> FILTRER</button>
-            <button class="notify-btn"><i class="fas fa-bell"></i></button>
+            <label>État de produit :</label>
+            <label ><input type="checkbox" />Neuf</label>
+            <label ><input type="checkbox" />Occasion</label>
+            
         </div>
-        </div>
+        
       </div>
       <div className="header_right">
         <img src={assets.header} alt="" className="header_img" />
