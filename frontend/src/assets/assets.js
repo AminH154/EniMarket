@@ -1,5 +1,6 @@
 import R from "./R.png";
-
+import annonce from "./annonce.jpg"
+import connect from "./connect.jpg"
 import add_icon_green from "./add_icon_green.png";
 import bicycle from "./bicycle.png";
 import book from "./book.png";
@@ -46,6 +47,8 @@ import s5 from "./s5.jpg";
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  annonce,
+  connect,
   reset,
   search,
   add_icon_green,
