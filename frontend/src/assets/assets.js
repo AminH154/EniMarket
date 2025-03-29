@@ -1,3 +1,8 @@
+import R from "./R.png"
+import n from "./n.jpeg"
+import oip from "./OIP.jpeg"
+import kio from "./kio.jpeg"
+import hou from "./hou.jpeg"
 import add_icon_green from "./add_icon_green.png";
 import bicycle from "./bicycle.png";
 import book from "./book.png";
@@ -36,6 +41,15 @@ import telephone_portable from "./telephone-portable.png";
 import twitter_icon from "./twitter_icon.png";
 import utilisateur from "./utilisateur.png";
 import reset from "./reset.png";
+
+export const swiper_assets=[
+  R,
+  n,
+  oip,
+  kio,
+  hou,
+]
+
 
 export const assets = {
   reset,
@@ -99,12 +113,6 @@ export const List_category = [
     category_name: "console",
     category_image: console,
   },
-  {
-    category_name: "console",
-    category_image: console,
-  },
-  {
-    category_name: "console",
-    category_image: console,
-  },
+
+
 ];
