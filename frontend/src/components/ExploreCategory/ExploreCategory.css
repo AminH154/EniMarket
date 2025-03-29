@@ -1,26 +1,31 @@
-/* Conteneur principal */
+
 .ExploreCategory {
-    padding: 20px; /* Espacement interne */
+    display: flex;
+    padding: 20px; 
+    flex-direction: column;
     
   
-    text-align: center; /* Centre le texte */
+    text-align: center; 
 }
 
-/* Titre */
+
 .ExploreCategory_text {
-    font-size: 24px; /* Taille du texte */
-    font-weight: bold; /* Texte en gras */
-    color: #333333; /* Couleur du texte */
-    margin-bottom: 20px; /* Espacement sous le titre */
+    text-align: start;
+    margin-left: 150px;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-/* Liste des catégories */
+
 .ExploreCategory_list {
-    
+    cursor: pointer;
     display: flex;
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments horizontalement */
-    gap: 20px; /* Espacement entre les éléments */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    overflow-x:scroll ;
 
 
     
@@ -34,36 +39,36 @@
 
 
 
-/* Élément individuel de la liste */
+
 .ExploreCategory_list_item {
-    background-color: #ffffff; /* Fond blanc */
-    border: 1px solid #e0e0e0; /* Bordure grise claire */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    padding: 15px; /* Espacement interne */
-    width: 150px; /* Largeur fixe pour chaque élément */
-    text-align: center; /* Centre le contenu */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 15px; 
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Image de la catégorie */
 .ExploreCategory_list_item img {
-    width: 100%; /* Image responsive */
-    height: auto; /* Conserve les proportions */
-    border-radius: 5px; /* Coins arrondis pour l'image */
-    margin-bottom: 10px; /* Espacement sous l'image */
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px;
 }
 
 /* Nom de la catégorie */
 .ExploreCategory_list_item p {
     font-size: 16px; /* Taille du texte */
     font-weight: bold; /* Texte en gras */
-    color: #333333; /* Couleur du texte */
-    margin: 0; /* Supprime les marges */
+    color: #333333; 
+    margin: 0;
 }
 
-/* Effet au survol */
+
 .ExploreCategory_list_item:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    transform: translateY(-5px); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); 
 }
