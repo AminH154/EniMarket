@@ -1,44 +1,15 @@
 import React from "react";
 import { assets } from "../../assets/assets";
 import "./Header.css";
+import {Swiper,SwiperSlide} from "swiper"
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+
 const Header = () => {
   return (
-    <div className="header">
-      <div className="hader_left">
-          <div className="fitre_header">
-            <div className="fitre_header_left">
-            <h4>Fitre avancés</h4>
-            </div>
-            <div className="fitre_header_right">
-               <img src={assets.reset} alt="" />
-               <i className="fas fa-sync-alt">Réinitailiser</i>
-            </div>
-            
-         
-          </div>
-          <div className="price-range">
-            <input type="number" name="Minimum" id="" placeholder="Minimum" />
-            <input type="number" name="Maximum" id=""  placeholder="Maximum"/>
-          </div>
-          <select>
-            <option value="catégory">Catégory</option>
-          </select>
-          <select>
-            <option value="sous catégory">Sous Catégory</option>
-          </select>
-         
-          <div class="filter-footer">
-            <label>État de produit :</label>
-            <label ><input type="checkbox" />Neuf</label>
-            <label ><input type="checkbox" />Occasion</label>
-            
-        </div>
-        
-      </div>
-      <div className="header_right">
-        <img src={assets.header} alt="" className="header_img" />
- 
-      </div>
+    <div className="container">
+    
+     
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .header{
-    display:flex ;
+    
     justify-content: space-between;
     padding: 5px 5px;
     border-radius: 30px;
@@ -9,90 +9,4 @@
 }
 
 /* Section gauche */
-.hader_left {
-    margin-top: 50px;
-;
-    flex: 1;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 400px;
-    background-color: #ffffff; 
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    border: 1px solid #e0e0e0;
-}
-
-
-.fitre_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 19px; 
-    font-weight: bold;
-    color: #333333; 
-}
-
-.fitre_header_right {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: #007bff; 
-    cursor: pointer; 
-    font-size: 14px; 
-}
-
-.fitre_header_right:hover {
-    color: #0056b3;
-}
-
-/* Inputs de plage de prix */
-.price-range {
-    display: flex;
-    gap: 10px; /* Espacement entre les champs */
-}
-
-.price-range input {
-    flex: 1; /* Prend toute la largeur disponible */
-    padding: 10px; /* Espacement interne */
-    border: 1px solid #cccccc; /* Bordure grise */
-    border-radius: 5px; /* Coins arrondis */
-    font-size: 14px; /* Taille du texte */
-    background-color: #f9f9f9; /* Fond gris clair */
-}
-
-.price-range input::placeholder {
-    color: #aaaaaa; 
-}
-
-/* Sélecteurs */
-select {
-    width: 100%; /* Prend toute la largeur */
-    padding: 10px; /* Espacement interne */
-    border: 1px solid #cccccc; /* Bordure grise */
-    border-radius: 5px; /* Coins arrondis */
-    font-size: 14px; /* Taille du texte */
-    background-color: #f9f9f9; /* Fond gris clair */
-    color: #333333; /* Couleur du texte */
-    margin-bottom: 10px; /* Espacement sous chaque sélecteur */
-}
-
-/* État de produit */
-.filter-footer {
-    display: flex;
-    justify-content: space-between; /* Espacement entre les options */
-    align-items: center;
-    font-size: 14px; /* Taille du texte */
-    color: #333333; /* Couleur du texte */
-    margin-top: 10px; /* Espacement au-dessus */
-}
-
-.filter-footer label {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Espacement entre la case à cocher et le texte */
-    font-weight: normal; /* Texte normal */
-}
 

@@ -1,4 +1,5 @@
 import React, { createContext } from 'react'
+import { List_category } from '../assets/assets';
 
 
 
@@ -9,8 +10,7 @@ export const storeContext = createContext(null);
 function StoreProviderContext (props) {
 
     const contextValue = {
-        // Add your desired context values here
-        exampleKey: "exampleValue"
+        List_category
     };
 
 

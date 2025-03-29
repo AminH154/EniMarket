@@ -1,17 +1,10 @@
 import add_icon_green from "./add_icon_green.png";
-import bicyccle from "./bicycle.png";
+import bicycle from "./bicycle.png";
 import book from "./book.png";
-import boutique from "./boutique.png";
 import calulator from "./calculator.png";
 import camera from "./camera.png";
 import console from "./console.png";
-import cpu from "./cpu.png";
-import digital_key from "./digital-key.png";
-import electice_kettle from "./electice-kettle.png";
-import graphic_tablet from "./graphic-tablet.png";
-import mini from "./mini.png"
 import music from "./music.png";
-import smartphone from "./smartphone.png";
 import add_icon_white from "./add_icon_white.png";
 import app_store from "./app_store.png";
 import appel from "./appel.png";
@@ -28,6 +21,7 @@ import flech_gauche from "./fleche-gauche.png";
 import github from "./github.png";
 import header from "./header.png";
 import idee from "./idee.png";
+import cpu from "./cpu.png";
 import linkedin from "./linkedin.png";
 import search from "./search.png";
 import logo from "./logo.png";
@@ -42,6 +36,7 @@ import telephone_portable from "./telephone-portable.png";
 import twitter_icon from "./twitter_icon.png";
 import utilisateur from "./utilisateur.png";
 import reset from "./reset.png";
+
 export const assets = {
   reset,
   search,
@@ -75,3 +70,41 @@ export const assets = {
   twitter_icon,
   utilisateur,
 };
+export const List_category = [
+  {
+    category_name: "caluclator",
+    category_image: calulator,
+  },
+  {
+    category_name: "book",
+    category_image: book,
+  },
+  {
+    category_name: "music",
+    category_image: music,
+  },
+  {
+    category_name: "bicycle",
+    category_image: bicycle,
+  },
+  {
+    category_name: "camera",
+    category_image: camera,
+  },
+  {
+    category_name: "cpu",
+    category_image: cpu,
+  },
+  {
+    category_name: "console",
+    category_image: console,
+  },
+  {
+    category_name: "console",
+    category_image: console,
+  },
+  {
+    category_name: "console",
+    category_image: console,
+  },
+];
