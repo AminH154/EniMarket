@@ -5,19 +5,31 @@ const Info = () => {
   return (
     <div className='Images'>
         <div className="ImageRight">
-            <button className='button_right'>
-                <i>Seconnecte</i>
+            <h1>Vous avez quelque chose à vendre?</h1>
+            <button>
+                publier une annonce
             </button>
-            <img src={assets.annonce} alt="" />
-
+            <img src={assets.image3} alt="" className='img1' >
+            </img>
         </div>
-        <div className="ImgLeft">
-        <button className='button_left'>
-                <i>publier une annoce</i>
-            </button>
+      <div className="derection">
+      <div className="ImgLeft">
+        <h1>Publier une  annonce</h1>
+            <button>
+                publier
+            </button>  
             <img src={assets.connect} alt="" />
-
+            
         </div>
+        <div className="ImgButtom">
+            <img src={assets.annonce} alt="" />
+        </div>
+
+
+      </div>
+      
+    
+       
       
     </div>
   )

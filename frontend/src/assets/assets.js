@@ -6,6 +6,7 @@ import bicycle from "./bicycle.png";
 import book from "./book.png";
 import calulator from "./calculator.png";
 import camera from "./camera.png";
+import image3 from "./img3.jpg"
 import console from "./console.png";
 import music from "./music.png";
 import add_icon_white from "./add_icon_white.png";
@@ -47,6 +48,7 @@ import s5 from "./s5.jpg";
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  image3,
   annonce,
   connect,
   reset,
