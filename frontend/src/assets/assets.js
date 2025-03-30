@@ -4,6 +4,10 @@ import connect from "./connect.jpg"
 import add_icon_green from "./add_icon_green.png";
 import bicycle from "./bicycle.png";
 import book from "./book.png";
+import vivo from "./vivo.jpg";
+import ps3 from "./ps3.jpg";
+import lenovo from "./lenovo.jpg"
+import tuf from "./tuf.webp"
 import calulator from "./calculator.png";
 import camera from "./camera.png";
 import image3 from "./img3.jpg"
@@ -43,14 +47,17 @@ import reset from "./reset.png";
 import s1 from "./s1.jpg";
 import s2 from "./s2.jpg";
 import img6 from "./img6.jpg"
+import airpods from "./airpods.webp"
 import s3 from "./s3.jpg";
 import s4 from "./s4.jpg";
 import s5 from "./s5.jpg";
 import img5 from"./img5.jpg"
 import connects from "./connectes.jpg"
+import shop from "./shop.mp4"
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  shop,
   img6,
   img5,
   connects,
@@ -119,3 +126,52 @@ export const List_category = [
     category_image: console,
   },
 ];
+
+
+
+export const Category_Item=[
+  {
+    _id: "1",
+    name: "Ps4 slim 1000go + 2cd",
+    image: ps3,
+    price: 650,
+    category:"Informatique et Multimedias" ,
+    
+  },
+  {
+    _id: "2",
+    name: "asus tuf gaming FX505GT",
+    image: tuf,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+  },
+  {
+    _id: "3",
+    name: "PC Portable LENOVO IdeaPad Slim 3",
+    image:lenovo ,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "4",
+    name: "vivo y11S neuf",
+    image: vivo,
+    price: 280,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "5",
+    name: "Samsung Buds Fe cacheté",
+    image: airpods,
+    price: 250,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+
+]

@@ -88,7 +88,7 @@
   animation: moveUp 2s linear infinite;
 }
 .ImageRight button {
-  pointer-events: auto; /* Permet au bouton de recevoir les clics */
+  pointer-events: auto; 
 }
 
 .ImgLeft button {
@@ -122,6 +122,7 @@
 .ImgLeft button .fa-arrow-right {
   animation: moveRight 2s linear infinite;
 }
+
 
 @keyframes moveRight {
   0% {

@@ -1,4 +1,4 @@
-/* General Navbar Styling */
+
 
 .logo {
   font-size: 45px;
@@ -24,7 +24,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* Logo Section */
+
 .navbar_right {
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-/* Center Section */
+
 .navbar_center {
   flex: 0.4;
   height: 60px;
@@ -113,21 +113,21 @@
 }
 
 .box-item img {
-  height: 25px; /* Reduced icon size */
+  height: 25px; 
   width: auto;
 }
 
 .box-item:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 .deconnecte {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 5px; /* Reduced space between icon and text */
-  font-size: 15px; /* Reduced text size */
-  color: #333333; /* Dark gray text */
+  gap: 5px; 
+  font-size: 15px;
+  color: #333333;
   cursor: pointer;
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import "./Info.css";
 import { assets } from "../../assets/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faArrowRight } from "@fortawesome/free-solid-svg-icons"; // Import des icônes
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Info = () => {
   return (

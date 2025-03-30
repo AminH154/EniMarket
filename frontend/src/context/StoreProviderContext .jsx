@@ -5,21 +5,20 @@ import { List_category } from '../assets/assets';
 
 export const storeContext = createContext(null);
 
+const StoreProviderContext  = (props) => {
 
-
-function StoreProviderContext (props) {
-
-    const contextValue = {
-        List_category
-    };
+  const contextValue = {
+      List_category
+  };
 
 
 
-    return (
-        <storeContext.Provider value={contextValue}>
-          {props.children}
-        </storeContext.Provider>
-      );
+  return (
+      <storeContext.Provider value={contextValue}>
+        {props.children}
+      </storeContext.Provider>
+    );
 }
 
 export default StoreProviderContext 
+

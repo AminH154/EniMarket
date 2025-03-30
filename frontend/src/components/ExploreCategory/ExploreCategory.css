@@ -25,18 +25,8 @@
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 20px;
-    overflow-x:scroll ;
-
-
-    
+    overflow-y: hidden;   
 }
-.ExploreCategory_list ::-webkit-scrollbar {
-  
-    width: 10px;
-  }
-
-
-
 
 
 

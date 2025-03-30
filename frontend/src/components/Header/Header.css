@@ -61,10 +61,9 @@ body {
   font-size: 1.6rem;
   background: var(--bg);
 }
-
 /* Conteneur principal */
 .container {
-  max-width: 124rem;
+  max-width: 135rem;
   padding: 4rem 1rem;
   margin: 0 auto;
 }
@@ -112,7 +111,7 @@ body {
     height: 36rem !important;
   }
   .swiper-slide img {
-    width: 28rem !important;
+    width: 27rem !important;
     height: 36rem !important;
   }
 }
