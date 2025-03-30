@@ -42,6 +42,7 @@ import utilisateur from "./utilisateur.png";
 import reset from "./reset.png";
 import s1 from "./s1.jpg";
 import s2 from "./s2.jpg";
+import img6 from "./img6.jpg"
 import s3 from "./s3.jpg";
 import s4 from "./s4.jpg";
 import s5 from "./s5.jpg";
@@ -50,6 +51,7 @@ import connects from "./connectes.jpg"
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  img6,
   img5,
   connects,
   image3,
