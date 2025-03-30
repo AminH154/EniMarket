@@ -45,9 +45,13 @@ import s2 from "./s2.jpg";
 import s3 from "./s3.jpg";
 import s4 from "./s4.jpg";
 import s5 from "./s5.jpg";
+import img5 from"./img5.jpg"
+import connects from "./connectes.jpg"
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  img5,
+  connects,
   image3,
   annonce,
   connect,

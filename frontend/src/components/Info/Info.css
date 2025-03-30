@@ -6,53 +6,49 @@
   gap: 2rem;
 }
 
-
-.ImageRight{
+.ImageRight {
   margin-left: 100px;
-  position: relative; 
+  position: relative;
   width: 420px;
-  height: 490px; 
-  border-radius: 1rem; 
+  height: 490px;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .ImageRight img,
 .ImgLeft img,
-.ImgButtom img{
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+.ImgButtom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
-.ImgLeft{
+.ImgLeft {
   margin-bottom: 10px;
   position: relative;
   width: 850px;
-  height: 237px ;
-  position: relative; 
+  height: 237px;
+  position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.ImgButtom{
+.ImgButtom {
   margin-top: 10px;
   width: 850px;
-  height: 237px ;
-  position: relative; 
+  height: 237px;
+  position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.derection{
+.derection {
   flex-direction: column;
 }
 .ImageRight h1 {
@@ -64,7 +60,7 @@
   z-index: 2;
   margin-left: 100px;
   margin-top: 180px;
-  
+
   color: white;
   font-size: 1.5rem;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
@@ -90,8 +86,40 @@
   transition: all 0.3s ease;
 }
 
+.ImgLeft button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 4px 4px 0px black;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  gap: 10px;
+}
 
-.ImageRight button:hover {
-  background-color: #ff6347;
-  transform: translateX(-50%) scale(1.1); 
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2)}
+.ImgLeft button:hover {
+  box-shadow: 2px 2px 0px black;
+  transform: translate(2px, 2px);
+}
+.ImgLeft button .fa-arrow-right {
+  animation: moveRight 2s linear infinite; /* Animation continue */
+}
+
+/* Définition de l'animation */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0); /* Position initiale */
+  }
+  50% {
+    transform: translateX(10px); /* Déplacement vers la droite */
+  }
+  100% {
+    transform: translateX(0); /* Retour à la position initiale */
+  }
+}

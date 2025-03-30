@@ -1,6 +1,9 @@
 import React from 'react'
 import './Info.css'
 import { assets } from '../../assets/assets'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import des icônes
+
 const Info = () => {
   return (
     <div className='Images'>
@@ -14,11 +17,12 @@ const Info = () => {
         </div>
       <div className="derection">
       <div className="ImgLeft">
-        <h1>Publier une  annonce</h1>
+        <h1>connecte</h1>
             <button>
-                publier
-            </button>  
-            <img src={assets.connect} alt="" />
+            <FontAwesomeIcon icon={faArrowRight} /> Cliquez ici
+            </button> 
+             
+            <img src={assets.img5} alt="" />
             
         </div>
         <div className="ImgButtom">
