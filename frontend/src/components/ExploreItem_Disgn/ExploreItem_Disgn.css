@@ -54,6 +54,9 @@
     font-weight: 700; 
     color: #ff6347;
 }
+
+
+
 .ExploreItem_box hr{
     border: none; /* Remove the default border */
     border-top: 2px solid #e0e0e0; /* Add a subtle top border */
@@ -62,3 +65,7 @@
     align-self: center;
     
 }
+.ExploreItem_box a{
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Ensures the text color matches the parent element */
+  }

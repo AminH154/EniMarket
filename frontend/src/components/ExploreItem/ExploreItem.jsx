@@ -15,7 +15,6 @@ const ExploreItem = () => {
             name={item.name}
             image={item.image}
             price={item.price}
-            category={item.category}
           />
         ))}
       </div>
