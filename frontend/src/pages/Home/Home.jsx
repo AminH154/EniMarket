@@ -7,7 +7,6 @@ import ExploreItem from '../../components/ExploreItem/ExploreItem';
 
 
 
-
 const Home = () => {
   return (
     <div className='home'>
@@ -15,6 +14,7 @@ const Home = () => {
        <ExploreCategory/>
        <Info/>
        <ExploreItem/>
+       
       
         
       

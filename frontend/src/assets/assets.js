@@ -173,5 +173,155 @@ export const Category_Item=[
 
 
   },
+  {
+    _id: "1",
+    name: "Ps4 slim 1000go + 2cd",
+    image: ps3,
+    price: 650,
+    category:"Informatique et Multimedias" ,
+    
+  },
+  {
+    _id: "2",
+    name: "asus tuf gaming FX505GT",
+    image: tuf,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+  },
+  {
+    _id: "3",
+    name: "PC Portable LENOVO IdeaPad Slim 3",
+    image:lenovo ,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "4",
+    name: "vivo y11S neuf",
+    image: vivo,
+    price: 280,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "5",
+    name: "Samsung Buds Fe cacheté",
+    image: airpods,
+    price: 250,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "2",
+    name: "asus tuf gaming FX505GT",
+    image: tuf,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+  },
+  {
+    _id: "3",
+    name: "PC Portable LENOVO IdeaPad Slim 3",
+    image:lenovo ,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "4",
+    name: "vivo y11S neuf",
+    image: vivo,
+    price: 280,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "5",
+    name: "Samsung Buds Fe cacheté",
+    image: airpods,
+    price: 250,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "2",
+    name: "asus tuf gaming FX505GT",
+    image: tuf,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+  },
+  {
+    _id: "3",
+    name: "PC Portable LENOVO IdeaPad Slim 3",
+    image:lenovo ,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "4",
+    name: "vivo y11S neuf",
+    image: vivo,
+    price: 280,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "5",
+    name: "Samsung Buds Fe cacheté",
+    image: airpods,
+    price: 250,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "2",
+    name: "asus tuf gaming FX505GT",
+    image: tuf,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+  },
+  {
+    _id: "3",
+    name: "PC Portable LENOVO IdeaPad Slim 3",
+    image:lenovo ,
+    price: 1500,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "4",
+    name: "vivo y11S neuf",
+    image: vivo,
+    price: 280,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+  {
+    _id: "5",
+    name: "Samsung Buds Fe cacheté",
+    image: airpods,
+    price: 250,
+    category:"Informatique et Multimedias" ,
+
+
+  },
+
+
 
 ]
