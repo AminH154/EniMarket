@@ -1,0 +1,44 @@
+.appdownload{
+    margin: auto auto;
+    margin-top: 40px;
+    font-size : 40px;
+    text-align: center;
+    font-weight: 500 ;
+}
+
+
+
+
+
+
+.wave-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .wave {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+.app-download-platforms{
+    height: 50px;
+    display: flex;
+    gap: max(1vw,5px) ;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.app-download-platforms{
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.app-download-platforms :hover{
+    transform: scale(1.05);
+}
