@@ -51,6 +51,14 @@
 
 .ExlopreItem_box_Info .price {
     font-size: 14px;
-    font-weight: 700; /* Bold for emphasis */
-    color: #ff6347; /* Highlighted price color */
+    font-weight: 700; 
+    color: #ff6347;
+}
+.ExploreItem_box hr{
+    border: none; /* Remove the default border */
+    border-top: 2px solid #e0e0e0; /* Add a subtle top border */
+    margin: 10px 0; /* Add spacing above and below */
+    width: 90%; /* Slightly reduce the width */
+    align-self: center;
+    
 }

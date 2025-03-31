@@ -28,6 +28,7 @@ import filtre from "./filtre.png";
 import flech_gauche from "./fleche-gauche.png";
 import github from "./github.png";
 import header from "./header.png";
+import linkedin_icon from"./linkedin_icon.png";
 import idee from "./idee.png";
 import cpu from "./cpu.png";
 import linkedin from "./linkedin.png";
@@ -74,6 +75,7 @@ export const assets = {
   appel,
   avance_rapide,
   bag_icon,
+  linkedin_icon,
   basker_icon,
   bouclier,
   commercialisation,

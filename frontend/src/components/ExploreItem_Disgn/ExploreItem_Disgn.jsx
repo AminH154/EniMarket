@@ -7,6 +7,7 @@ const ExploreItem_Disgn = ({id,name,image,price,category}) => {
           <img src={image} alt="" />
 
         </div>
+        <hr />
         <div className="ExlopreItem_box_Info">
             <div className="text">
               {name}
