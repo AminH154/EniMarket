@@ -11,6 +11,7 @@
 }
 
 .FiltreAvance_right {
+  flex-direction: column;
   padding: 12px;
   flex:4; 
   display: flex;
@@ -86,3 +87,13 @@
     color: #555;
     margin: 0;
   }
+
+  
+.ExploreItem_list{
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  margin-top: 30px;
+  row-gap: 1px;
+  ;
+} 

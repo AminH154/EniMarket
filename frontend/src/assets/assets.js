@@ -101,6 +101,7 @@ export const assets = {
   telephone_portable,
   twitter_icon,
   utilisateur,
+  ps3,
 };
 export const List_category = [
   {
