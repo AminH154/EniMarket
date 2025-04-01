@@ -1,11 +1,88 @@
-.FiltreAvance h1{
-    margin-top: 190px;
-    font-size: 150px;
+.FiltreAvance {
+    margin-top: 80px;
+  display: flex; /* Use Flexbox for layout */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Add padding around the container */
 }
-.FiltreAvance p{
-    margin-top: 190px;
-    font-size: 50px;
+
+.FiltreAvance_left {
+  flex: 1; 
+  padding: 25px;
 }
-.FiltreAvance_left{
-    margin-top: 100px;
+
+.FiltreAvance_right {
+  padding: 12px;
+  flex:4; 
+  display: flex;
+  margin-left: 170px;
 }
+.FiltreAvance_right img {
+    margin-top: 10px;
+    height: 430px;
+    width: 280px;
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .FiltreAvance_right h1 {
+    font-size: 24px;
+    font-weight: bold; 
+    color: blue; 
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add spacing above the heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    text-transform: uppercase; /* Make the text uppercase */
+    padding: 12px;
+    letter-spacing: 1px; /* Add spacing between letters */
+  }
+
+
+  .FiltreAvance_featured {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .FiltreAvance_featured h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 5px solid #ff5722; 
+    padding-left: 10px; 
+  }
+  
+  .FiltreAvance_cards {
+    display: flex; 
+    gap: 20px;
+    overflow-x: auto; 
+  }
+  
+  .FiltreAvance_card {
+    flex: 1; 
+    max-width: 300px; 
+    background-color: #f9f9f9;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .FiltreAvance_card img {
+    width: 100%; /* Make the image take the full width of the card */
+    height: 150px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+  
+  .FiltreAvance_card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+  }

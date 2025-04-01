@@ -1,17 +1,17 @@
 .hader_left {
-    margin-top: 50px;
-;
+    position: fixed;
     flex: 1;
-    max-width: 400px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 400px;
+    height: 550px;
     background-color: #ffffff; 
     padding: 20px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     border: 1px solid #e0e0e0;
+
 }
 
 
@@ -65,7 +65,7 @@ select {
     font-size: 14px; /* Taille du texte */
     background-color: #f9f9f9; /* Fond gris clair */
     color: #333333; /* Couleur du texte */
-    margin-bottom: 10px; /* Espacement sous chaque sélecteur */
+    /* Espacement sous chaque sélecteur */
 }
 
 /* État de produit */
