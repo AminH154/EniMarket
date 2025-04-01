@@ -7,21 +7,16 @@ import AppDownload from "../../components/appDownload/AppDownload";
 import ExploreItem from "../../components/ExploreItem/ExploreItem"; // Adjust the path if necessary
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
+
 const Home = () => {
-  const [Category,SetCategory] = useState('all');
+  
+
   return (
     <div className="home">
-       <Link
-        to={{
-          pathname:"/filtreavance" ,
-          state: { Category }, 
-        }}
-      >
-      </Link>
       <Header />
-      <ExploreCategory SetCategory={SetCategory} />
+      <ExploreCategory />
       <Info />
-      <ExploreItem  />
+      <ExploreItem />
       <AppDownload />
       <Footer />
     </div>

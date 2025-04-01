@@ -28,6 +28,10 @@
     overflow-y: hidden;   
 }
 
+.ExploreCategory_list_item a{
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Ensures the text color matches the parent element */
+  }
 
 
 .ExploreCategory_list_item {
