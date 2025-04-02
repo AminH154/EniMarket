@@ -41,6 +41,7 @@ import se_deconnecter from "./se-deconnecter.png";
 import search_icon from "./search_icon.png";
 import search1_icon from "./search1-icon.png";
 import seconnecte from "./seconnecte-icon.jpg";
+import suit from "./suit.png"
 import sms from "./sms.png";
 import play_store from "./app_store.png";
 import telephone_portable from "./telephone-portable.png";
@@ -53,14 +54,17 @@ import s2 from "./s2.jpg";
 import img6 from "./img6.jpg";
 import airpods from "./airpods.webp";
 import s3 from "./s3.jpg";
+import programming from "./programming.png";
 import s4 from "./s4.jpg";
 import s5 from "./s5.jpg";
 import img5 from "./img5.jpg";
 import connects from "./connectes.jpg";
 import shop from "./shop.mp4";
+import hard_drive from "./hard_drive.png"
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  suit,
   Fheader,
   filtreAvance,
   play_store,
@@ -98,42 +102,41 @@ export const assets = {
   se_deconnecter,
   search_icon,
   search1_icon,
+  programming,
   seconnecte,
   sms,
   telephone_portable,
   twitter_icon,
   utilisateur,
   ps3,
+  hard_drive,
 };
 export const List_category = [
   {
-    category_name: "caluclator",
-    category_image: calulator,
+    category_name: "fiches",
+    category_image: book,
   },
   {
-    category_name: "book",
-    category_image: book,
+    category_name: "Vêtements",
+    category_image: suit,
+  },
+  {
+    category_name: "Informatique et Multimedias",
+    category_image: programming,
   },
   {
     category_name: "music",
     category_image: music,
   },
   {
-    category_name: "bicycle",
-    category_image: bicycle,
-  },
-  {
-    category_name: "camera",
-    category_image: camera,
-  },
-  {
-    category_name: "cpu",
+    category_name: "Carte IoT ",
     category_image: cpu,
   },
   {
-    category_name: "console",
-    category_image: console,
+    category_name: "projets",
+    category_image: hard_drive,
   },
+ 
 ];
 
 export const Category_Item = [
