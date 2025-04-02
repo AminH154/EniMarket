@@ -75,11 +75,11 @@
   }
   
   .FiltreAvance_card img {
-    width: 100%; /* Make the image take the full width of the card */
-    height: 150px; /* Set a fixed height for the image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    border-radius: 10px; /* Rounded corners for the image */
-    margin-bottom: 10px; /* Add spacing below the image */
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 10px; 
   }
   
   .FiltreAvance_card p {
@@ -87,13 +87,21 @@
     color: #555;
     margin: 0;
   }
-
   
-.ExploreItem_list{
-  padding: 5px;
+.FiltreAvance_buttom{
+
+
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
   margin-top: 30px;
   row-gap: 1px;
   ;
 } 
+.buttom h2{
+  text-align: start;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+
+

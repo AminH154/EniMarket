@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 550px;
+    height: 500px;
     background-color: #ffffff; 
     padding: 20px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
@@ -84,3 +84,26 @@ select {
     gap: 5px; /* Espacement entre la case à cocher et le texte */
     font-weight: normal; /* Texte normal */
 }
+.Filtrebuttom {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 20px; /* Add spacing above the button */
+  }
+  
+  .Filtrebuttom{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px;
+    background-color: #f44336; 
+    border: none; 
+    border-radius: 25px; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  

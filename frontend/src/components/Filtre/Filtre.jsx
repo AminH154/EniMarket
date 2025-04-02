@@ -2,6 +2,7 @@ import React from 'react'
 import { assets } from '../../assets/assets'
 import "./Filtre.css"
 
+
 const Filtre = () => {
   return (
         <div className="hader_left">
@@ -32,6 +33,11 @@ const Filtre = () => {
                 <label ><input type="checkbox" />Neuf</label>
                 <label ><input type="checkbox" />Occasion</label>
               </div>
+              <div className='Filtrebuttom'>
+                  <img src={assets.filtreAvance} alt="Filter Icon" />
+                <p>Filtre</p>
+              </div>
+            
                 
         </div>
   )

@@ -6,7 +6,6 @@ const ExploreItem_Disgn = ({id,name,image,price}) => {
 
  
     <div className='ExploreItem_box'>
-      <Link to={`/filtreavance/${name}`}>
       <div className="ExlopreItem_box_Img">
               <img src={image} alt="" />
         </div>
@@ -19,7 +18,6 @@ const ExploreItem_Disgn = ({id,name,image,price}) => {
               {price}
             </div>
         </div>
-      </Link>
       
      
     </div>

@@ -10,6 +10,7 @@ import ExploreItemDisgn from "../../components/ExploreItem_Disgn/ExploreItem_Dis
 const FiltreAvance = () => {
   const { category } = useParams(); // Extract category from URL
   const  {Category_Item} =useContext(storeContext)
+  const filteredFoodList = category === 'all' ? Category_Item : Category_Item.filter(item => item.category === category);
   return (
     <div className="FiltreAvance">
       <div className="FiltreAvance_left">
@@ -36,9 +37,9 @@ const FiltreAvance = () => {
           </div>
         </div>
         <div className="buttom">
-          <h1>*Filtre par catégory*</h1>
-          <div className="ExploreItem_list">
-            {Category_Item.map((item, index) => (
+          <h2>Filtre par {category}</h2>
+          <div className="FiltreAvance_buttom">
+            {filteredFoodList.map((item, index) => (
               <ExploreItemDisgn
                 key={index}
                 id={index + 1}
