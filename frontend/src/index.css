@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html, body {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les paddings par défaut */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  width: 100%; /* Fixe la largeur à 100% de la fenêtre */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
