@@ -84,8 +84,8 @@ import iot4 from "./iot4.jpg"
 import iot5 from "./iot5.jpg"
 import p1 from "./p1.jpg"
 import p2 from "./p2.webp"
-
-
+import fichier12 from "./fichier12.jpg"
+import fichier11 from "./fichier11.jpg"
 
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
@@ -169,7 +169,7 @@ export const Category_Item = [
   {
     _id: "8",
     name: "Fichiers et livres primaire",
-    image: fichier2,
+    image: [fichier2,fichier12,fichier11,fichier1],
     price: 30,
     category:"fiches",
   },
