@@ -60,7 +60,24 @@ import s5 from "./s5.jpg";
 import img5 from "./img5.jpg";
 import connects from "./connectes.jpg";
 import shop from "./shop.mp4";
-import hard_drive from "./hard_drive.png"
+import hard_drive from "./hard-drive.png";
+import fichier1 from "./fichier1.jpg";
+import fichier2 from "./fichier2.jpg";
+import fichier3 from "./fichier3.jpg";
+import fichier4 from "./fichier4.jpg";
+import fichier5 from "./fichier5.webp"
+
+
+
+
+
+
+
+
+
+
+
+
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
@@ -141,157 +158,75 @@ export const List_category = [
 
 export const Category_Item = [
   {
+    _id: "8",
+    name: "Fichiers et livres primaire",
+    image: fichier2,
+    price: 30,
+    category:"fiches",
+  },
+  {
     _id: "1",
     name: "Ps4 slim 1000go + 2cd",
     image: ps3,
     price: 650,
-    category: "book",
+    category:"Informatique et Multimedias",
   },
   {
     _id: "2",
     name: "asus tuf gaming FX505GT",
     image: tuf,
     price: 1500,
-    category: "book",
+    category:"Informatique et Multimedias",
   },
   {
     _id: "3",
     name: "PC Portable LENOVO IdeaPad Slim 3",
     image: lenovo,
     price: 1500,
-    category: "book",
+    category:"Informatique et Multimedias",
   },
   {
     _id: "4",
     name: "vivo y11S neuf",
     image: vivo,
     price: 280,
-    category: "music",
+    category:"Informatique et Multimedias",
   },
   {
     _id: "5",
     name: "Samsung Buds Fe cacheté",
     image: airpods,
     price: 250,
-    category: "music",
+    category:"Informatique et Multimedias",
   },
   {
     _id: "6",
-    name: "Ps4 slim 1000go + 2cd",
-    image: ps3,
-    price: 650,
-    category: "music",
+    name: "Fichiers lecture",
+    image: fichier5,
+    price: 5,
+    category:"fiches",
   },
   {
     _id: "7",
-    name: "asus tuf gaming FX505GT",
-    image: tuf,
-    price: 1500,
-    category: "Informatique et Multimedias",
+    name: "Fichier Bonjour l'Histoire",
+    image: fichier5,
+    price: 10,
+    category:"fiches",
   },
-  {
-    _id: "8",
-    name: "PC Portable LENOVO IdeaPad Slim 3",
-    image: lenovo,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
+
   {
     _id: "9",
-    name: "vivo y11S neuf",
-    image: vivo,
-    price: 280,
-    category: "Informatique et Multimedias",
+    name: "Fichier rotatif",
+    image: fichier3,
+    price: 15,
+    category:"fiches",
   },
   {
     _id: "10",
-    name: "Samsung Buds Fe cacheté",
-    image: airpods,
-    price: 250,
-    category: "Informatique et Multimedias",
+    name: "Fichier client",
+    image: fichier1,
+    price: 29,
+    category:"fiches",
   },
-  {
-    _id: "11",
-    name: "asus tuf gaming FX505GT",
-    image: tuf,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "12",
-    name: "PC Portable LENOVO IdeaPad Slim 3",
-    image: lenovo,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "13",
-    name: "vivo y11S neuf",
-    image: vivo,
-    price: 280,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "14",
-    name: "Samsung Buds Fe cacheté",
-    image: airpods,
-    price: 250,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "15",
-    name: "asus tuf gaming FX505GT",
-    image: tuf,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "16",
-    name: "PC Portable LENOVO IdeaPad Slim 3",
-    image: lenovo,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "17",
-    name: "vivo y11S neuf",
-    image: vivo,
-    price: 280,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "18",
-    name: "Samsung Buds Fe cacheté",
-    image: airpods,
-    price: 250,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "2",
-    name: "asus tuf gaming FX505GT",
-    image: tuf,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "3",
-    name: "PC Portable LENOVO IdeaPad Slim 3",
-    image: lenovo,
-    price: 1500,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "4",
-    name: "vivo y11S neuf",
-    image: vivo,
-    price: 280,
-    category: "Informatique et Multimedias",
-  },
-  {
-    _id: "5",
-    name: "Samsung Buds Fe cacheté",
-    image: airpods,
-    price: 250,
-    category: "Informatique et Multimedias",
-  },
+  
 ];

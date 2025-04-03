@@ -37,7 +37,7 @@ const FiltreAvance = () => {
           </div>
         </div>
         <div className="buttom">
-          <h2>Filtre par {category}</h2>
+          <h2>Annonces {category} d’occasion </h2>
           <div className="FiltreAvance_buttom">
             {filteredFoodList.map((item, index) => (
               <ExploreItemDisgn

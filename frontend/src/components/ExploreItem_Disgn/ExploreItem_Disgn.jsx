@@ -15,9 +15,10 @@ const ExploreItem_Disgn = ({id,name,image,price}) => {
               {name}
             </div>
             <div className="price">
-              {price}
+              {price} DT
             </div>
         </div>
+       
       
      
     </div>
