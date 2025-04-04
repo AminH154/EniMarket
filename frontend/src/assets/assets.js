@@ -29,7 +29,7 @@ import filtre from "./filtre.png";
 import flech_gauche from "./fleche-gauche.png";
 import github from "./github.png";
 import header from "./header.png";
-import linkedin_icon from"./linkedin_icon.png";
+import linkedin_icon from "./linkedin_icon.png";
 import idee from "./idee.png";
 import cpu from "./cpu.png";
 import linkedin from "./linkedin.png";
@@ -41,7 +41,7 @@ import se_deconnecter from "./se-deconnecter.png";
 import search_icon from "./search_icon.png";
 import search1_icon from "./search1-icon.png";
 import seconnecte from "./seconnecte-icon.jpg";
-import suit from "./suit.png"
+import suit from "./suit.png";
 import sms from "./sms.png";
 import play_store from "./app_store.png";
 import telephone_portable from "./telephone-portable.png";
@@ -49,7 +49,7 @@ import twitter_icon from "./twitter_icon.png";
 import utilisateur from "./utilisateur.png";
 import reset from "./reset.png";
 import s1 from "./s1.jpg";
-import filtreAvance from "./filtreAvance.png"
+import filtreAvance from "./filtreAvance.png";
 import s2 from "./s2.jpg";
 import img6 from "./img6.jpg";
 import airpods from "./airpods.webp";
@@ -65,27 +65,27 @@ import fichier1 from "./fichier1.jpg";
 import fichier2 from "./fichier2.jpg";
 import fichier3 from "./fichier3.jpg";
 import fichier4 from "./fichier4.jpg";
-import fichier5 from "./fichier5.webp"
-import vet1 from"./vet1.jpg"
-import vet2 from"./vet2.jpg"
-import vet3 from"./vet3.webp"
-import vet4 from"./vet4.jpg"
-import vet5 from"./vet5.jpg"
-import mu1 from "./mu1.jpg"
-import mu2 from "./mu2.jpg"
-import mu3 from "./mu3.jpg"
-import mu4 from "./mu4.webp"
-import mu5 from "./mu5.jpg"
-import iot from "./iot.jpg"
-import iot1 from "./iot1.jpg"
-import iot2 from "./iot2.jpg"
-import iot3 from "./iot3.jpg"
-import iot4 from "./iot4.jpg"
-import iot5 from "./iot5.jpg"
-import p1 from "./p1.jpg"
-import p2 from "./p2.webp"
-import fichier12 from "./fichier12.jpg"
-import fichier11 from "./fichier11.jpg"
+import fichier5 from "./fichier5.webp";
+import vet1 from "./vet1.jpg";
+import vet2 from "./vet2.jpg";
+import vet3 from "./vet3.webp";
+import vet4 from "./vet4.jpg";
+import vet5 from "./vet5.jpg";
+import mu1 from "./mu1.jpg";
+import mu2 from "./mu2.jpg";
+import mu3 from "./mu3.jpg";
+import mu4 from "./mu4.webp";
+import mu5 from "./mu5.jpg";
+import iot from "./iot.jpg";
+import iot1 from "./iot1.jpg";
+import iot2 from "./iot2.jpg";
+import iot3 from "./iot3.jpg";
+import iot4 from "./iot4.jpg";
+import iot5 from "./iot5.jpg";
+import p1 from "./p1.jpg";
+import p2 from "./p2.webp";
+import fichier12 from "./fichier12.jpg";
+import fichier11 from "./fichier11.jpg";
 
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
@@ -162,87 +162,88 @@ export const List_category = [
     category_name: "projets",
     category_image: hard_drive,
   },
- 
 ];
 
 export const Category_Item = [
   {
     _id: "8",
     name: "Fichiers et livres primaire",
-    image: [fichier2,fichier12,fichier11,fichier1],
+    image: [fichier2, fichier12, fichier11, fichier1],
     price: 30,
-    category:"fiches",
+    category: "fiches",
+    descripiton:"Manuels de la petite section au cm2 Livres d exercices de français ainsi que d étude de textes Bled de ce2-c mCalcul mental ce2-cm Fichiers de maths cm1",
+    date:"04/04/2025"
   },
   {
     _id: "1",
     name: "Ps4 slim 1000go + 2cd",
     image: ps3,
     price: 650,
-    category:"Informatique et Multimedias",
+    category: "Informatique et Multimedias",
   },
   {
     _id: "2",
     name: "asus tuf gaming FX505GT",
     image: tuf,
     price: 1500,
-    category:"Informatique et Multimedias",
+    category: "Informatique et Multimedias",
   },
   {
     _id: "13",
     name: "Maillot Football Belgique Gardien De But Taille L",
     image: vet3,
     price: 35,
-    category:"Vêtements",
+    category: "Vêtements",
   },
   {
     _id: "3",
     name: "PC Portable LENOVO IdeaPad Slim 3",
     image: lenovo,
     price: 1500,
-    category:"Informatique et Multimedias",
+    category: "Informatique et Multimedias",
   },
   {
     _id: "4",
     name: "vivo y11S neuf",
     image: vivo,
     price: 280,
-    category:"Informatique et Multimedias",
+    category: "Informatique et Multimedias",
   },
   {
     _id: "5",
     name: "Samsung Buds Fe cacheté",
     image: airpods,
     price: 250,
-    category:"Informatique et Multimedias",
+    category: "Informatique et Multimedias",
   },
   {
     _id: "6",
     name: "Fichiers lecture",
     image: fichier4,
     price: 5,
-    category:"fiches",
+    category: "fiches",
   },
   {
     _id: "16",
     name: "Instrument music Bérbére RIBAB",
     image: mu1,
     price: 120,
-    category:"music",
+    category: "music",
   },
   {
     _id: "15",
     name: "Manche longue",
     image: vet1,
     price: 22,
-    category:"Vêtements",
+    category: "Vêtements",
   },
-  
+
   {
     _id: "7",
     name: "Fichier Bonjour l'Histoire",
     image: fichier5,
     price: 10,
-    category:"fiches",
+    category: "fiches",
   },
 
   {
@@ -250,42 +251,42 @@ export const Category_Item = [
     name: "Fichier rotatif",
     image: fichier3,
     price: 15,
-    category:"fiches",
+    category: "fiches",
   },
   {
     _id: "21",
     name: "🛠️ Carte de Développement IoT WiFi ESP 🌐",
     image: iot1,
     price: 15,
-    category:"Carte IoT",
+    category: "Carte IoT",
   },
   {
     _id: "10",
     name: "Fichier client",
     image: fichier1,
     price: 29,
-    category:"fiches",
+    category: "fiches",
   },
   {
     _id: "20",
     name: "Tourne disque vintage ,balad",
     image: mu5,
     price: 40,
-    category:"music",
+    category: "music",
   },
   {
     _id: "11",
     name: "Manteau Veste Vintage Beige Mi-long Taille 46 Scenic",
     image: vet2,
     price: 10,
-    category:"Vêtements",
+    category: "Vêtements",
   },
   {
     _id: "12",
     name: "Manteau de fourrure véritable Taille 40 V_995 client",
     image: vet4,
     price: 50,
-    category:"Vêtements",
+    category: "Vêtements",
   },
 
   {
@@ -293,7 +294,7 @@ export const Category_Item = [
     name: "Chemise Noire Taille 42 Cherokee",
     image: vet5,
     price: 6,
-    category:"Vêtements",
+    category: "Vêtements",
   },
 
   {
@@ -301,36 +302,36 @@ export const Category_Item = [
     name: "Maxi 45T musix synthetic apocalypse",
     image: mu3,
     price: 10,
-    category:"music",
+    category: "music",
   },
   {
     _id: "25",
     name: "Carte de developement ESP32 WROOM double coeurs 38 broches + Carte extension NEUVES",
     image: iot3,
     price: 12,
-    category:"Carte IoT",
+    category: "Carte IoT",
   },
-    {
+  {
     _id: "18",
     name: "RGB",
     image: mu2,
     price: 70,
-    category:"music",
+    category: "music",
   },
   {
     _id: "19",
     name: "Wonderwall Music [Import]",
     image: mu4,
     price: 24,
-    category:"music",
+    category: "music",
   },
 
   {
     _id: "22",
     name: "Carte STM (Kit Découverte), découvrir l’IoT à la même manière qu’Ardiuno",
     image: iot2,
-    price:50,
-    category:"Carte IoT",
+    price: 50,
+    category: "Carte IoT",
   },
 
   {
@@ -338,26 +339,20 @@ export const Category_Item = [
     name: "Lot de 7 cartes et modules OPEN PICUS Grove",
     image: iot,
     price: 60,
-    category:"Carte IoT",
+    category: "Carte IoT",
   },
   {
     _id: "26",
     name: "Impression 3D - Modélisation - Assistance Projet",
     image: p1,
     price: 30,
-    category:"projets",
+    category: "projets",
   },
   {
     _id: "27",
     name: "Projets informatiques",
     image: p2,
     price: 800,
-    category:"projets",
+    category: "projets",
   },
-
-
-
-
-
-
 ];

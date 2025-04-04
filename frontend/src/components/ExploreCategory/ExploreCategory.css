@@ -10,6 +10,13 @@
 
 
 .ExploreCategory_text {
+    white-space: nowrap;
+    overflow: hidden; 
+    width: 0; 
+    animation: typing 6s steps(40, end) infinite; 
+    text-align: left; 
+    direction: ltr;
+    border-right: none; 
     text-align: start;
     margin-left: 150px;
     font-size: 24px; 
@@ -32,7 +39,14 @@
     text-decoration: none; /* Removes the underline */
     color: inherit; /* Ensures the text color matches the parent element */
   }
-
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
 .ExploreCategory_list_item {
     background-color: #ffffff;

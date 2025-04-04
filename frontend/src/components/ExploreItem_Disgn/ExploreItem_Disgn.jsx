@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ExploreItem_Disgn.css";
-const ExploreItem_Disgn = ({ id, name, image, price }) => {
+const ExploreItem_Disgn = ({ id, name, image, price,descripiton,date }) => {
 
 
   return (
@@ -9,7 +9,7 @@ const ExploreItem_Disgn = ({ id, name, image, price }) => {
       <Link to={{
         pathname:"produitpage",
       }}
-        state={{id,name,image,price}}
+        state={{id,name,image,price,descripiton,date}}
      >
         <div className="ExlopreItem_box_Img">
           <img src={Array.isArray(image)?image[0]:image} alt="" />

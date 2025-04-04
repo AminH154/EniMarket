@@ -1,18 +1,18 @@
 .ExploreItem_box {
 
-    width: 227px; /* Compact and modern size */
+    width: 227px; 
     background-color: #ffffff;
-    border: 1px solid #e6e6e6; /* Subtle border */
-    border-radius: 12px; /* Slightly rounded corners */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid #e6e6e6; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 15px; 
 }
 
 .ExploreItem_box:hover {
-    transform: translateY(-8px); /* Lift effect on hover */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-8px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
 .ExlopreItem_box_Img {
@@ -22,18 +22,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8; /* Light background for images */
+    background-color: #f8f8f8; 
 }
 
 .ExlopreItem_box_Img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the container */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 
 .ExlopreItem_box_Img img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05); 
 }
 
 .ExlopreItem_box_Info {
@@ -43,10 +43,9 @@
 
 .ExlopreItem_box_Info .text {
     font-size: 16px;
-    font-weight: 600; /* Semi-bold for a clean look */
-    color: #333333; /* Neutral text color */
-    margin-bottom: 8px;
-    text-transform: capitalize; /* Capitalize item names */
+    font-weight: 600; 
+    color: #333333; 
+    text-transform: capitalize; 
 }
 
 .ExlopreItem_box_Info .price {
@@ -58,10 +57,10 @@
 
 
 .ExploreItem_box hr{
-    border: none; /* Remove the default border */
-    border-top: 2px solid #e0e0e0; /* Add a subtle top border */
-    margin: 10px 0; /* Add spacing above and below */
-    width: 90%; /* Slightly reduce the width */
+    border: none; 
+    border-top: 2px solid #e0e0e0; 
+    margin: 10px 0; 
+    width: 90%; 
     align-self: center;
     
 }

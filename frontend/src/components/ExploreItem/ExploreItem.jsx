@@ -15,6 +15,8 @@ const ExploreItem = () => {
             name={item.name}
             image={item.image}
             price={item.price}
+            descripiton={item.descripiton}
+            date={item.date}
           />
         ))}
       </div>

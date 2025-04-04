@@ -1,4 +1,84 @@
-.ProduitPage h1{
+/* Conteneur principal de la galerie */
+.gallery-container {
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.gallery_Left{
+    
+}
+.image-wrapper {
+
+    position: relative;
+    width: 90%; 
+    max-width: 600px;
+    margin: auto;
+}
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flèches */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Flèche gauche */
+.left-arrow {
+    left: 10px; /* Positionnez à gauche de l'image */
+}
+
+/* Flèche droite */
+.right-arrow {
+    right: 10px; /* Positionnez à droite de l'image */
+}
+
+/* Miniatures */
+.thumbnails {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-    font-size: 50px;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail.active {
+    border: 2px solid #007bff;
 }
