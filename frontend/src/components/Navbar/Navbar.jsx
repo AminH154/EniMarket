@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { assets } from './../../assets/assets';
+import Wave from './../Wave/Wave'; // Adjust the path based on the actual location of the Wave component
 
 const navbar = () => {
   return(
@@ -34,6 +35,7 @@ const navbar = () => {
           <p>Se connecter</p>
         </div>
       </div>
+      <Wave/>
     </div>
 
   );};

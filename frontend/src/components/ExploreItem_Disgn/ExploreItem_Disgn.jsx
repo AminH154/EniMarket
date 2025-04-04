@@ -7,7 +7,7 @@ const ExploreItem_Disgn = ({ id, name, image, price,descripiton,date }) => {
   return (
     <div className="ExploreItem_box">
       <Link to={{
-        pathname:"produitpage",
+        pathname:"/produitpage",
       }}
         state={{id,name,image,price,descripiton,date}}
      >
