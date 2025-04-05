@@ -16,7 +16,7 @@ const Info = () => {
         <div className="ImgLeft">
           <h1>connecter</h1>
           <button>
-            <FontAwesomeIcon icon={faArrowRight} /> Cliquez ici
+            <FontAwesomeIcon icon={faArrowRight} /> Cliquez 
           </button>
           <img src={assets.img5} alt="" />
         </div>

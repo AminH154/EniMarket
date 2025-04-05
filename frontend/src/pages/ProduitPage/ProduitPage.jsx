@@ -2,13 +2,12 @@ import "./ProduitPage.css";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import BoxInfo from "../../components/BoxInfo/BoxInfo"
 const ProduitPage = () => {
   const location = useLocation();
   const { id, name, image, price, descripiton } = location.state || {};
   const [selectedImage, setSelectedImage] = useState(0);
 
-  // Vérifiez si `image` est un tableau, sinon utilisez un tableau vide par défaut
   const images = Array.isArray(image) ? image : [];
 
   const nextImage = () => {
@@ -62,14 +61,20 @@ const ProduitPage = () => {
           </div>
         </div>
       </div>
+      <div className="boxInfo">
+        <div className="box">
+          <BoxInfo/>
+        </div>
+        <div className="product-info">
+          <h2 className="product-name">{name}</h2>
+          <p className="product-id">ID: {id}</p>
+          <p className="product-description">{descripiton}</p>
+          <p className="product-price">Prix: {price} €</p>
+        </div>
 
-      {/* Informations sur le produit */}
-      <div className="product-info">
-        <h2 className="product-name">{name}</h2>
-        <p className="product-id">ID: {id}</p>
-        <p className="product-description">{descripiton}</p>
-        <p className="product-price">Prix: {price} €</p>
       </div>
+      {/* Informations sur le produit */}
+     
     </div>
   );
 };

@@ -5,7 +5,13 @@
     text-align: center;
     font-weight: 500 ;
 }
-
+.appdownload p{
+    animation: typing 6s steps(40, end) infinite; 
+    white-space: nowrap;
+    overflow: hidden; 
+    width: 0; 
+    animation: typing 6s steps(50, end) infinite; 
+}
 
 
 
@@ -17,17 +23,16 @@
     height: 100px; /* Adjust height as needed */
     overflow: hidden;
   }
-  
-  .wave {
-    width: 400px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 .app-download-platforms{
-    height: 50px;
+    height: 70px;
     display: flex;
     gap: max(1vw,5px) ;
     justify-content: center;

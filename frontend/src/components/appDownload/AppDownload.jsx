@@ -4,7 +4,7 @@ import "./AppDownoad.css";
 
 function AppDowload() {
   return (
-    <div className="appdownload " id="appdownload">
+    <div className="appdownload" id="appdownload">
       
 
 

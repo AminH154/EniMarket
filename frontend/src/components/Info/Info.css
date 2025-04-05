@@ -99,6 +99,8 @@
   padding: 10px 20px;
   background: white;
   color: black;
+  width:150px;
+  height: 40px;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 25px;
@@ -118,9 +120,14 @@
 .ImgLeft button:hover {
   box-shadow: 2px 2px 0px black;
   transform: translate(2px, 2px);
+
 }
 .ImgLeft button .fa-arrow-right {
-  animation: moveRight 2s linear infinite;
+  position: relative;
+  margin-left: 5px; /* Ajoute un espace entre le texte et la flèche */
+  top: 0; /* Aligne verticalement la flèche avec le texte */
+  font-size: 16px; /* Ajuste la taille de la flèche si nécessaire */
+  animation: moveRight 2s linear infinite; /* Conserve l'animation */
 }
 
 
