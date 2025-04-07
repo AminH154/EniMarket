@@ -63,7 +63,7 @@ const ProduitPage = () => {
       </div>
       <div className="boxInfo">
         <div className="box">
-          <BoxInfo/>
+          <BoxInfo />
         </div>
         <div className="product-info">
           <h2 className="product-name">{name}</h2>
