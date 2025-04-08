@@ -15,7 +15,7 @@ const BoxInfo = () => {
             
           </div>
         </div>
-        <button className="arrowButton"> click </button>
+        <button className="arrowButton">›</button>
       </div>
       <button className="buyButton">Acheter</button>
       <button className="offerButton">Faire une offre</button>
@@ -23,9 +23,8 @@ const BoxInfo = () => {
       <div className="paymentSection">
         <span>🔒 Paiement sécurisé</span>
         <div className="paymentMethods">
-          <Image src={assets.cb} alt="CB" width={30} height={20} />
-          <Image src={assets.visa} alt="Visa" width={30} height={20} />
-          <Image src={assets.mastercard} alt="Mastercard" width={30} height={20} />
+          <img src={assets.visa} alt="visa" width={30} height={20} />
+          <img src={assets.mastercard} alt="Mastercard" width={30} height={20} />
         </div>
       </div>
       

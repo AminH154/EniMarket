@@ -7,6 +7,8 @@ import bicycle from "./bicycle.png";
 import book from "./book.png";
 import vivo from "./vivo.jpg";
 import ps3 from "./ps3.jpg";
+import visa from "./visa.webp";
+import mastercard from "./mastercard.png"
 import lenovo from "./lenovo.jpg";
 import tuf from "./tuf.webp";
 import calulator from "./calculator.png";
@@ -90,6 +92,8 @@ import fichier11 from "./fichier11.jpg";
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  visa,
+  mastercard,
   suit,
   Fheader,
   filtreAvance,

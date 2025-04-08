@@ -20,63 +20,62 @@ const ProduitPage = () => {
 
   return (
     <div className="gallery-container">
-      <div className="gallery_Left">
-        <div className="image-wrapper">
-          {/* Flèche gauche */}
-          <button className="arrow left-arrow" onClick={prevImage}>
-            &#8592;
-          </button>
+  <div className="gallery_Left">
+    <div className="image-wrapper">
+      {/* Flèche gauche */}
+      <button className="arrow left-arrow" onClick={prevImage}>
+        &#8592;
+      </button>
 
-          {/* Image Principale */}
-          {images.length > 0 ? (
-            <motion.img
-              key={selectedImage}
-              src={images[selectedImage]}
-              alt={name}
-              className="main-image"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            />
-          ) : (
-            (<img src={image} alt={name} className="main-image" />)
-          )}
+      {/* Image Principale */}
+      {images.length > 0 ? (
+        <motion.img
+          key={selectedImage}
+          src={images[selectedImage]}
+          alt={name}
+          className="main-image"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        />
+      ) : (
+        <img src={image} alt={name} className="main-image" />
+      )}
 
-          {/* Flèche droite */}
-          <button className="arrow right-arrow" onClick={nextImage}>
-            &#8594;
-          </button>
+      {/* Flèche droite */}
+      <button className="arrow right-arrow" onClick={nextImage}>
+        &#8594;
+      </button>
 
-          {/* Miniatures */}
-          <div className="thumbnails">
-            {images.map((img, index) => (
-              <motion.img
-                key={index}
-                src={img}
-                className={`thumbnail ${index === selectedImage ? "active" : ""}`}
-                whileHover={{ scale: 1.1 }}
-                onClick={() => setSelectedImage(index)}
-              />
-            ))}
-          </div>
-        </div>
+      {/* Miniatures */}
+      <div className="thumbnails">
+        {images.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img}
+            className={`thumbnail ${index === selectedImage ? "active" : ""}`}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => setSelectedImage(index)}
+          />
+        ))}
       </div>
-      <div className="boxInfo">
-        <div className="box">
-          <BoxInfo />
-        </div>
-        <div className="product-info">
-          <h2 className="product-name">{name}</h2>
-          <p className="product-id">ID: {id}</p>
-          <p className="product-description">{descripiton}</p>
-          <p className="product-price">Prix: {price} €</p>
-        </div>
-
-      </div>
-      {/* Informations sur le produit */}
-     
     </div>
-  );
+
+    {/* Information du produit sous l'image */}
+    <div className="product-info">
+      <h2 className="product-name">{name}</h2>
+      <p className="product-id">ID: {id}</p>
+      <p className="product-description">{descripiton}</p>
+      <p className="product-price">Prix: {price} €</p>
+    </div>
+  </div>
+
+  <div className="box">
+    <BoxInfo />
+  </div>
+</div>
+
+  )
 };
 
 export default ProduitPage;
