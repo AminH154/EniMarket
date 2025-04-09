@@ -4,6 +4,7 @@ import annonce from "./annonce.jpg";
 import connect from "./connect.jpg";
 import add_icon_green from "./add_icon_green.png";
 import bicycle from "./bicycle.png";
+import d17 from "./d17.png";
 import book from "./book.png";
 import vivo from "./vivo.jpg";
 import ps3 from "./ps3.jpg";
@@ -92,6 +93,7 @@ import fichier11 from "./fichier11.jpg";
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  d17,
   visa,
   mastercard,
   suit,

@@ -154,3 +154,7 @@ svg {
  
   height: 50px;
 }
+.navbar_right a{
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Ensures the text color matches the parent element */
+}

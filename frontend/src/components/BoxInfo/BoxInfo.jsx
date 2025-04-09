@@ -23,6 +23,7 @@ const BoxInfo = () => {
       <div className="paymentSection">
         <span>🔒 Paiement sécurisé</span>
         <div className="paymentMethods">
+          <img src={assets.d17} alt="visa" width={30} height={20} />
           <img src={assets.visa} alt="visa" width={30} height={20} />
           <img src={assets.mastercard} alt="Mastercard" width={30} height={20} />
         </div>

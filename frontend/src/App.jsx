@@ -5,11 +5,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import FiltreAvance from "./pages/FiltreAvance/FiltreAvance";
 import ProduitPage from "./pages/ProduitPage/ProduitPage";
-
+import LoginPage from "./components/Login/LoginPage"
+import { useState } from "react";
 function App() {
-  return (
+    const [loggin, setLoggin] = useState(false);
+    return (
+    
     <div className="App">
-      <Navbar />
+      {loggin && <LoginPage />}
+      <Navbar  loggin={loggin} setLoggin={setLoggin}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/filtreavance/:category" element={<FiltreAvance />} />
