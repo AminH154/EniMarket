@@ -36,10 +36,12 @@ const navbar = ({loggin, setLoggin}) => {
           <p>publier une annonce</p>
         </div>
         <hr />
-          <div className="deconnecte" onClick={() => setLoggin(!loggin)}>
-            
-          <img src={assets.utilisateur} alt="" />
-          <p>Se connecter</p>
+          <div className="deconnecte" >
+            <Link to={"/login"}>
+              <img src={assets.utilisateur} alt="" />
+              <p>Se connecter</p>
+            </Link>
+         
         </div>
       </div>
       <Wave/>

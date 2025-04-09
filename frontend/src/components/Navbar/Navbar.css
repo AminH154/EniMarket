@@ -1,5 +1,3 @@
-
-
 .logo {
   font-size: 45px;
   font-weight: bold;
@@ -8,7 +6,6 @@
 }
 
 .navbar {
-
   position: fixed;
   display: flex;
   top: 0;
@@ -24,7 +21,6 @@
   font-family: "Nunito", sans-serif;
 }
 
-
 .navbar_right {
   display: flex;
   align-items: center;
@@ -35,7 +31,6 @@
   width: auto;
   cursor: pointer;
 }
-
 
 .navbar_center {
   flex: 0.4;
@@ -69,7 +64,6 @@
     font-size: 16px;
     padding: 5px 0;
     width: 100%;
-
 }
 
 .box_item-centre p {
@@ -92,10 +86,10 @@
   align-items: center;
   gap: 20px;
 }
+
 .box-item {
   display: flex;
   height: 35px;
-
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -122,22 +116,39 @@
 }
 
 .deconnecte {
-  width: 100%;
   display: flex;
   align-items: center;
-  gap: 5px; 
-  font-size: 15px;
-  color: #333333;
+  gap: 10px;
   cursor: pointer;
+  padding: 5px;
+}
+
+.deconnecte a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .deconnecte img {
-  height: 15px;
-  width: auto;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.deconnecte p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4b5563;
+  white-space: nowrap;
 }
 
 .deconnecte:hover p {
-  color: #007bff;
+  color: #7c3aed;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
 }
 
 hr {
@@ -146,14 +157,15 @@ hr {
   opacity: 0.5;
   margin: 0;
 }
+
 svg {
   position: absolute;
   bottom: -12px;
   left: 0;
   width: 230px;
- 
   height: 50px;
 }
+
 .navbar_right a{
   text-decoration: none; /* Removes the underline */
   color: inherit; /* Ensures the text color matches the parent element */
