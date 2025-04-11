@@ -7,6 +7,7 @@ import FiltreAvance from "./pages/FiltreAvance/FiltreAvance";
 import ProduitPage from "./pages/ProduitPage/ProduitPage";
 import { useState } from "react";
 import LoginPage from "./components/login/LoginPage";
+import SignUp from "./components/signup/SignUp";
 
 function App() {
     const [loggin, setLoggin] = useState(false);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/filtreavance/:category" element={<FiltreAvance />} />
         <Route path="/produitpage" element={<ProduitPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={< SignUp />} />
       </Routes>
     </div>
   );
