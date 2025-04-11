@@ -133,7 +133,7 @@
     margin-left: 5px;
 }
 
-.login-left-input input {
+.login-left-input input[type="text"] {
     padding: 10px 16px;
     border-radius: 12px;
     border: 2px solid transparent;
@@ -142,11 +142,53 @@
     transition: all 0.3s ease;
 }
 
+.login-left-input input[type="text"].error {
+    border-color: #ef4444;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.login-left-input input[type="text"].error:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+}
+
+.email-error {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 5px;
+    display: none;
+}
+
+.email-error.show {
+    display: block;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
 .login-left-input input:focus {
     outline: none;
     border-color: #a78bfa;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+}
+
+/* Styles pour les états de succès */
+.login-left-input input.success {
+    border-color: #10b981;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.login-left-input input.success:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
 }
 
 .login-left-input input::placeholder {
@@ -199,13 +241,10 @@ hr::before {
 }
 
 .login-checkbox {
-    font-size: 11px;
-    color: #4b5563;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin: 8px auto;
-    max-width: 380px;
+    gap: 12px;
 }
 
 .login-checkbox .a,
@@ -213,27 +252,49 @@ hr::before {
     display: flex;
     align-items: flex-start;
     gap: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-checkbox .a:hover,
+.login-checkbox .b:hover {
+    background-color: #f8fafc;
 }
 
 .login-checkbox input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     margin-top: 2px;
-    accent-color: #a78bfa;
+    cursor: pointer;
+    accent-color: #7c3aed;
+    border: 2px solid #e2e8f0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.login-checkbox input[type="checkbox"]:checked {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+.login-checkbox label {
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.4;
     cursor: pointer;
 }
 
 .login-checkbox label span {
-    color: #6366f1;
-    cursor: pointer;
-    text-decoration: none;
+    color: #7c3aed;
     font-weight: 500;
-    transition: color 0.2s ease;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .login-checkbox label span:hover {
-    color: #4f46e5;
-    text-decoration: underline;
+    color: #6d28d9;
 }
 
 button {
@@ -309,31 +370,69 @@ button:active {
     padding: 0 10px;
 }
 
-.passwordInput {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.EmailInput {
     position: relative;
+    margin-bottom: 20px;
     width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
+}
+
+.EmailInput label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.EmailInput input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2d3748;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.EmailInput input:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    background-color: #ffffff;
+}
+
+.passwordInput {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.passwordInput label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
 }
 
 .passwordInput input {
     width: 100%;
-    padding: 10px 40px 10px 16px;
-    border-radius: 12px;
-    border: 2px solid transparent;
-    background-color: #f3f4f6;
+    padding: 12px 16px;
+    padding-right: 40px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
     font-size: 14px;
+    color: #2d3748;
+    background-color: #f8fafc;
     transition: all 0.3s ease;
 }
 
 .passwordInput input:focus {
     outline: none;
-    border-color: #a78bfa;
-    background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    background-color: #ffffff;
 }
 
 .passwordInput img {
@@ -341,8 +440,6 @@ button:active {
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 0.3s ease;
@@ -350,4 +447,21 @@ button:active {
 
 .passwordInput img:hover {
     opacity: 1;
+}
+
+.ErreurMessage {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 4px;
+    animation: shake 0.5s ease-in-out;
+    text-align: start;
+    margin-left: 0;
+    display: block;
+    width: 100%;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
 }
