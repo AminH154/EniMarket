@@ -6,7 +6,8 @@ import Home from "./pages/Home/Home";
 import FiltreAvance from "./pages/FiltreAvance/FiltreAvance";
 import ProduitPage from "./pages/ProduitPage/ProduitPage";
 import { useState } from "react";
-import LoginPage from "./login/LoginPage";
+import LoginPage from "./components/login/LoginPage";
+
 function App() {
     const [loggin, setLoggin] = useState(false);
     return (

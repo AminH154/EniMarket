@@ -3,6 +3,8 @@ import Fheader from "./Fheader.jpg";
 import annonce from "./annonce.jpg";
 import connect from "./connect.jpg";
 import add_icon_green from "./add_icon_green.png";
+import eye from "./eye.png"
+import hide from "./hide.png"
 import bicycle from "./bicycle.png";
 import d17 from "./d17.png";
 import book from "./book.png";
@@ -46,6 +48,7 @@ import search1_icon from "./search1-icon.png";
 import seconnecte from "./seconnecte-icon.jpg";
 import suit from "./suit.png";
 import sms from "./sms.png";
+import logoGo from "./logoGo.webp";
 import play_store from "./app_store.png";
 import telephone_portable from "./telephone-portable.png";
 import twitter_icon from "./twitter_icon.png";
@@ -94,7 +97,10 @@ import fichier11 from "./fichier11.jpg";
 export const swiper_assets = [R, s1, s2, s3, s4, s5];
 
 export const assets = {
+  eye,
+  hide,
   boutique,
+  logoGo,
   d17,
   visa,
   mastercard,
