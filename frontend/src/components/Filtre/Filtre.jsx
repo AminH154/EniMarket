@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { assets } from '../../assets/assets'
 import "./Filtre.css"
 
-const Filtre = ({ onFilterChange }) => {
+const Filtre = ({ onFilterChange, initialCategory }) => {
   const [filters, setFilters] = useState({
     minPrice: '',
     maxPrice: '',
-    category: '',
+    category: initialCategory || '',
     subCategory: '',
     condition: {
       new: false,
@@ -14,13 +14,27 @@ const Filtre = ({ onFilterChange }) => {
     }
   });
 
+  useEffect(() => {
+    if (initialCategory) {
+      setFilters(prev => ({
+        ...prev,
+        category: initialCategory
+      }));
+      onFilterChange({
+        ...filters,
+        category: initialCategory
+      });
+    }
+  }, [initialCategory]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFilters(prev => ({
-      ...prev,
+    const newFilters = {
+      ...filters,
       [name]: value
-    }));
-    onFilterChange({ ...filters, [name]: value });
+    };
+    setFilters(newFilters);
+    onFilterChange(newFilters);
   };
 
   const handleCheckboxChange = (e) => {
@@ -72,7 +86,7 @@ const Filtre = ({ onFilterChange }) => {
         </div>
         <div className="fitre_header_right" onClick={handleReset}>
           <img src={assets.reset} alt="reset" />
-          <i className="fas fa-sync-alt">Réinitialiser</i>
+          <span>Réinitialiser</span>
         </div>
       </div>
       
@@ -99,21 +113,12 @@ const Filtre = ({ onFilterChange }) => {
         onChange={handleInputChange}
       >
         <option value="">Catégorie</option>
-        <option value="electronics">Électronique</option>
-        <option value="clothing">Vêtements</option>
-        <option value="books">Livres</option>
-        <option value="furniture">Meubles</option>
-      </select>
-
-      <select 
-        name="subCategory" 
-        value={filters.subCategory}
-        onChange={handleInputChange}
-      >
-        <option value="">Sous Catégorie</option>
-        <option value="phones">Téléphones</option>
-        <option value="laptops">Ordinateurs</option>
-        <option value="accessories">Accessoires</option>
+        <option value="fiches">Fiches</option>
+        <option value="Vêtements">Vêtements</option>
+        <option value="Informatique et Multimedias">Informatique et Multimedias</option>
+        <option value="music">Music</option>
+        <option value="Carte IoT">Carte IoT</option>
+        <option value="projets">Projets</option>
       </select>
 
       <div className="filter-footer">
@@ -138,10 +143,6 @@ const Filtre = ({ onFilterChange }) => {
         </label>
       </div>
 
-      <div className='Filtrebuttom'>
-        <img src={assets.filtreAvance} alt="Filter Icon" />
-        <p>Filtre</p>
-      </div>
     </div>
   )
 }

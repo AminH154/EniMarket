@@ -1,24 +1,55 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./FiltreAvance.css";
 import { assets } from "./../../assets/assets";
 import { useParams } from "react-router-dom";
 import Filtre from "../../components/Filtre/Filtre";
 import { storeContext } from "../../context/StoreProviderContext";
 import ExploreItemDisgn from "../../components/ExploreItem_Disgn/ExploreItem_Disgn";
+import Footer from "../../components/footer/Footer";
 
 const FiltreAvance = () => {
   const { category } = useParams();
   const { Category_Item } = useContext(storeContext);
+
+  const categories = [
+    { id: 'fiches', name: 'Fiches', icon: assets.fiches },
+    { id: 'vetements', name: 'Vêtements', icon: assets.vetements },
+    { id: 'informatique', name: 'Informatique et Multimedias', icon: assets.informatique },
+    { id: 'music', name: 'Music', icon: assets.music },
+    { id: 'carteiot', name: 'Carte IoT', icon: assets.carteiot },
+    { id: 'projets', name: 'Projets', icon: assets.projets }
+  ];
+
   const [filters, setFilters] = useState({
     minPrice: '',
     maxPrice: '',
-    category: '',
-    subCategory: '',
+    category: category || '',
     condition: {
       new: false,
       used: false
     }
   });
+
+  // État pour le carrousel
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState('next');
+
+  // Sélectionner les 3 premiers éléments pour le carrousel
+  const featuredItems = Category_Item.slice(0, 3).map(item => ({
+    image: Array.isArray(item.image) ? item.image[0] : item.image,
+    title: item.name,
+    price: `${item.price} DH`
+  }));
+
+  // Animation automatique du carrousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection('next');
+      setCurrentSlide(prev => (prev + 1) % featuredItems.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [featuredItems.length]);
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
@@ -27,7 +58,8 @@ const FiltreAvance = () => {
   const applyFilters = (items) => {
     return items.filter(item => {
       // Filtre par catégorie principale
-      if (category !== "all" && item.category !== category) {
+      if (filters.category && filters.category !== "all" && 
+          item.category.toLowerCase() !== filters.category.toLowerCase()) {
         return false;
       }
 
@@ -36,11 +68,6 @@ const FiltreAvance = () => {
         return false;
       }
       if (filters.maxPrice && item.price > Number(filters.maxPrice)) {
-        return false;
-      }
-
-      // Filtre par sous-catégorie
-      if (filters.subCategory && item.subCategory !== filters.subCategory) {
         return false;
       }
 
@@ -57,31 +84,54 @@ const FiltreAvance = () => {
   };
 
   const filteredItems = applyFilters(Category_Item);
+
   return (
     <div className="FiltreAvance">
       <div className="FiltreAvance_left">
-        <Filtre onFilterChange={handleFilterChange} />
+        <Filtre 
+          onFilterChange={handleFilterChange} 
+          categories={categories}
+          initialCategory={category}
+        />
       </div>
       <div className="FiltreAvance_right">
         <div className="FiltreAvance_featured">
           <h1>À la une</h1>
           <div className="FiltreAvance_cards">
-            <div className="FiltreAvance_card">
-              <img src={assets.ps3} alt="Card 1" />
-              <p>A vendre un Local Commercial de 58.09m²</p>
-            </div>
-            <div className="FiltreAvance_card">
-              <img src={assets.ps3} alt="Card 1" />
-              <p>A vendre un Local Commercial de 58.09m²</p>
-            </div>
-            <div className="FiltreAvance_card">
-              <img src={assets.ps3} alt="Card 1" />
-              <p>A vendre un Local Commercial de 58.09m²</p>
-            </div>
+            {featuredItems.map((item, index) => (
+              <div
+                key={index}
+                className={`FiltreAvance_card ${
+                  index === currentSlide 
+                    ? 'active' 
+                    : index === (currentSlide - 1 + featuredItems.length) % featuredItems.length 
+                    ? 'previous' 
+                    : ''
+                }`}
+              >
+                <img src={item.image} alt={item.title} />
+                <p>{item.title}</p>
+                <span className="price">{item.price}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="carousel-dots">
+            {featuredItems.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => {
+                  setDirection(index > currentSlide ? 'next' : 'prev');
+                  setCurrentSlide(index);
+                }}
+              />
+            ))}
           </div>
         </div>
+
         <div className="buttom">
-          <h2>Annonces {category} d'occasion</h2>
+          <h2>Annonces {filters.category || 'Tous les produits'}</h2>
           <div className="FiltreAvance_buttom">
             {filteredItems.map((item, index) => (
               <ExploreItemDisgn
@@ -97,7 +147,10 @@ const FiltreAvance = () => {
           </div>
         </div>
       </div>
+      
     </div>
+
+       
   );
 };
 

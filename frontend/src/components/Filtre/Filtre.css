@@ -4,14 +4,13 @@
     max-width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    height: 500px;
+    gap: 40px;
+    height: auto;
     background-color: #ffffff; 
     padding: 20px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     border: 1px solid #e0e0e0;
-
 }
 
 
@@ -41,6 +40,7 @@
 .price-range {
     display: flex;
     gap: 10px; /* Espacement entre les champs */
+    margin-top: 20px;
 }
 
 .price-range input {
@@ -65,6 +65,7 @@ select {
     font-size: 14px; /* Taille du texte */
     background-color: #f9f9f9; /* Fond gris clair */
     color: #333333; /* Couleur du texte */
+    margin-top: 20px;
     /* Espacement sous chaque sélecteur */
 }
 
@@ -75,7 +76,7 @@ select {
     align-items: center;
     font-size: 14px; /* Taille du texte */
     color: #333333; /* Couleur du texte */
-    margin-top: 10px; /* Espacement au-dessus */
+    margin-top: 20px; /* Espacement au-dessus */
 }
 
 .filter-footer label {
@@ -105,5 +106,60 @@ select {
     cursor: pointer; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
+  
+/* Styles pour la grille de catégories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.category-item.selected {
+    background-color: #f0f7ff;
+    border-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.category-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+}
+
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+.category-item span {
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+    font-weight: 500;
+}
+
+.category-item.selected span {
+    color: #007bff;
+}
   
   
