@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./FiltreAvance.css";
 import { assets } from "./../../assets/assets";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import Filtre from "../../components/Filtre/Filtre";
 import { storeContext } from "../../context/StoreProviderContext";
 import ExploreItemDisgn from "../../components/ExploreItem_Disgn/ExploreItem_Disgn";
@@ -9,6 +9,8 @@ import Footer from "../../components/footer/Footer";
 
 const FiltreAvance = () => {
   const { category } = useParams();
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get('q');
   const { Category_Item } = useContext(storeContext);
 
   const categories = [
@@ -57,6 +59,17 @@ const FiltreAvance = () => {
 
   const applyFilters = (items) => {
     return items.filter(item => {
+      // Filtre par recherche dans le nom et la description
+      if (searchQuery) {
+        const searchLower = searchQuery.toLowerCase();
+        const description = item.descripiton?.toLowerCase() || '';
+        const name = item.name?.toLowerCase() || '';
+        
+        if (!description.includes(searchLower) && !name.includes(searchLower)) {
+          return false;
+        }
+      }
+
       // Filtre par catégorie principale
       if (filters.category && filters.category !== "all" && 
           item.category.toLowerCase() !== filters.category.toLowerCase()) {
@@ -131,7 +144,11 @@ const FiltreAvance = () => {
         </div>
 
         <div className="buttom">
-          <h2>Annonces {filters.category || 'Tous les produits'}</h2>
+          <h2>
+            {searchQuery 
+              ? `Résultats pour "${searchQuery}"` 
+              : `Annonces ${filters.category || 'Tous les produits'}`}
+          </h2>
           <div className="FiltreAvance_buttom">
             {filteredItems.map((item, index) => (
               <ExploreItemDisgn
@@ -147,10 +164,7 @@ const FiltreAvance = () => {
           </div>
         </div>
       </div>
-      
     </div>
-
-       
   );
 };
 

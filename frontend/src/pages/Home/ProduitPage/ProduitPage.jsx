@@ -68,7 +68,7 @@ const ProduitPage = () => {
           <h2 className="product-name">{name}</h2>
           <p className="product-id">ID: {id}</p>
           <p className="product-description">{descripiton}</p>
-          <p className="product-price">Prix: {price} €</p>
+          <p className="product-price">Prix: {price} DT</p>
         </div>
       </div>
 
