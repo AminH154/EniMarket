@@ -1,0 +1,82 @@
+
+.ExploreCategory {
+    display: flex;
+    padding: 20px; 
+    flex-direction: column;
+    
+  
+    text-align: center; 
+}
+
+
+.ExploreCategory_text {
+    white-space: nowrap;
+    overflow: hidden; 
+    width: 0; 
+    animation: typing 6s steps(40, end) infinite; 
+    text-align: left; 
+    direction: ltr;
+    border-right: none; 
+    text-align: start;
+    margin-left: 150px;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+
+.ExploreCategory_list {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    overflow-y: hidden;   
+}
+
+.ExploreCategory_list_item a{
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Ensures the text color matches the parent element */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+.ExploreCategory_list_item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 15px; 
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image de la catégorie */
+.ExploreCategory_list_item img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+/* Nom de la catégorie */
+.ExploreCategory_list_item p {
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #333333; 
+    margin: 0;
+}
+
+
+.ExploreCategory_list_item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); 
+}

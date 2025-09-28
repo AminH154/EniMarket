@@ -1,0 +1,17 @@
+.ExploreItem h1{
+    text-align: start;
+    margin-left: 65px;
+    font-size: 20px;
+}
+.ExploreItem{
+    margin-top: 20px;
+}
+
+.ExploreItem_list{
+    margin: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,0.5fr));
+    margin-top: 30px;
+    row-gap: 1px;
+    ;
+} 

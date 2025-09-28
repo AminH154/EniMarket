@@ -1,0 +1,162 @@
+/* Conteneur principal */
+.Images {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.ImageRight {
+  margin-left: 100px;
+  position: relative;
+  width: 420px;
+  height: 490px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImageRight img,
+.ImgLeft img,
+.ImgButtom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.ImgLeft {
+  margin-bottom: 10px;
+  position: relative;
+  width: 850px;
+  height: 237px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.ImgButtom {
+  cursor: pointer;
+  margin-top: 10px;
+  width: 850px;
+  height: 237px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.derection {
+  flex-direction: column;
+}
+.ImageRight h1 {
+  position: absolute;
+  font-size: 15px;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin-left: 100px;
+  margin-top: 180px;
+
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ImageRight button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 140px;
+  margin-left: 85px;
+  margin-bottom: 120px;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: tomato;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: moveUp 2s linear infinite;
+}
+.ImageRight button {
+  pointer-events: auto; 
+}
+
+.ImgLeft button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  width:150px;
+  height: 40px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 4px 4px 0px black;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  gap: 10px;
+}
+.ImgLeft button {
+  position: relative;
+  z-index: 10;
+}
+.ImgLeft img {
+  z-index: 1;
+}
+
+.ImgLeft button:hover {
+  box-shadow: 2px 2px 0px black;
+  transform: translate(2px, 2px);
+
+}
+.ImgLeft button .fa-arrow-right {
+  position: relative;
+  margin-left: 5px; /* Ajoute un espace entre le texte et la flèche */
+  top: 0; /* Aligne verticalement la flèche avec le texte */
+  font-size: 16px; /* Ajuste la taille de la flèche si nécessaire */
+  animation: moveRight 2s linear infinite; /* Conserve l'animation */
+}
+
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.ImageRight button:hover {
+  background-color: #ff6347;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -15px);
+}
