@@ -1,9 +1,13 @@
+/* ===== DESIGN MOBILE-FIRST POUR INFO ===== */
+
 /* Conteneur principal */
 .Images {
   display: flex;
   align-items: center;
   padding: 2rem;
   gap: 2rem;
+  background: #f8fafc;
+  min-height: 100vh;
 }
 
 .ImageRight {
@@ -14,6 +18,11 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ImageRight:hover {
+  transform: scale(1.02);
 }
 
 .ImageRight img,
@@ -26,6 +35,13 @@
   top: 0;
   left: 0;
   z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.ImageRight:hover img,
+.ImgLeft:hover img,
+.ImgButtom:hover img {
+  transform: scale(1.05);
 }
 
 .ImgLeft {
@@ -33,11 +49,17 @@
   position: relative;
   width: 850px;
   height: 237px;
-  position: relative;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+
+.ImgLeft:hover {
+  transform: translateY(-5px);
+}
+
 .ImgButtom {
   cursor: pointer;
   margin-top: 10px;
@@ -47,24 +69,29 @@
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ImgButtom:hover {
+  transform: translateY(-5px);
 }
 
 .derection {
   flex-direction: column;
 }
+
 .ImageRight h1 {
   position: absolute;
-  font-size: 15px;
+  font-size: 1.5rem;
   top: 20%;
   left: 45%;
   transform: translate(-50%, -50%);
   z-index: 2;
   margin-left: 100px;
   margin-top: 180px;
-
   color: white;
-  font-size: 1.5rem;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
 .ImageRight button {
@@ -76,19 +103,24 @@
   margin-bottom: 120px;
   transform: translateX(-50%);
   z-index: 2;
-  background-color: tomato;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  box-shadow: 0px 4px 15px rgba(255, 107, 107, 0.3);
   transition: all 0.3s ease;
   animation: moveUp 2s linear infinite;
+  pointer-events: auto;
 }
-.ImageRight button {
-  pointer-events: auto; 
+
+.ImageRight button:hover {
+  background: linear-gradient(135deg, #ee5a24, #ff6b6b);
+  box-shadow: 0px 6px 20px rgba(255, 107, 107, 0.4);
+  transform: translateX(-50%) translateY(-5px);
 }
 
 .ImgLeft button {
@@ -96,11 +128,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: white;
   color: black;
-  width:150px;
-  height: 40px;
+  width: 150px;
+  height: 45px;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 25px;
@@ -108,11 +140,10 @@
   transition: all 0.2s ease-in-out;
   font-size: 16px;
   gap: 10px;
-}
-.ImgLeft button {
   position: relative;
   z-index: 10;
 }
+
 .ImgLeft img {
   z-index: 1;
 }
@@ -120,16 +151,15 @@
 .ImgLeft button:hover {
   box-shadow: 2px 2px 0px black;
   transform: translate(2px, 2px);
-
 }
+
 .ImgLeft button .fa-arrow-right {
   position: relative;
-  margin-left: 5px; /* Ajoute un espace entre le texte et la flèche */
-  top: 0; /* Aligne verticalement la flèche avec le texte */
-  font-size: 16px; /* Ajuste la taille de la flèche si nécessaire */
-  animation: moveRight 2s linear infinite; /* Conserve l'animation */
+  margin-left: 5px;
+  top: 0;
+  font-size: 16px;
+  animation: moveRight 2s linear infinite;
 }
-
 
 @keyframes moveRight {
   0% {
@@ -155,8 +185,187 @@
   }
 }
 
-.ImageRight button:hover {
-  background-color: #ff6347;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-  transform: translate(-50%, -15px);
+/* ===== MEDIA QUERIES MOBILE ===== */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+  .Images {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .ImageRight {
+    margin-left: 0;
+    width: 100%;
+    height: 350px;
+  }
+  
+  .ImageRight h1 {
+    margin-left: 0;
+    margin-top: 120px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .ImageRight button {
+    margin-left: 0;
+    margin-bottom: 80px;
+    width: 120px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .derection {
+    width: 100%;
+  }
+  
+  .ImgLeft {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .ImgLeft button {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .ImgButtom {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Téléphones portables (480px et moins) */
+@media screen and (max-width: 480px) {
+  .Images {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .ImageRight {
+    height: 280px;
+  }
+  
+  .ImageRight h1 {
+    font-size: 1.1rem;
+    margin-top: 100px;
+  }
+  
+  .ImageRight button {
+    width: 100px;
+    margin-bottom: 60px;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+  
+  .ImgLeft {
+    height: 150px;
+  }
+  
+  .ImgLeft button {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+  .ImgButtom {
+    height: 150px;
+  }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+  .Images {
+    padding: 0.8rem;
+  }
+  
+  .ImageRight {
+    height: 250px;
+  }
+  
+  .ImageRight h1 {
+    font-size: 1rem;
+    margin-top: 80px;
+  }
+  
+  .ImageRight button {
+    width: 80px;
+    margin-bottom: 50px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+  
+  .ImgLeft {
+    height: 120px;
+  }
+  
+  .ImgLeft button {
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+  
+  .ImgButtom {
+    height: 120px;
+  }
+}
+
+/* ===== ANIMATIONS MOBILE ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ImageRight,
+.ImgLeft,
+.ImgButtom {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.ImgLeft {
+  animation-delay: 0.1s;
+}
+
+.ImgButtom {
+  animation-delay: 0.2s;
+}
+
+/* ===== TOUCH OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+  .ImageRight:hover,
+  .ImgLeft:hover,
+  .ImgButtom:hover {
+    transform: none;
+  }
+  
+  .ImageRight:active,
+  .ImgLeft:active,
+  .ImgButtom:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .Images {
+    background: #1a1a1a;
+  }
+  
+  .ImageRight,
+  .ImgLeft,
+  .ImgButtom {
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
 }

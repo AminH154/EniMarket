@@ -1,8 +1,65 @@
+/* ===== DESIGN MOBILE-FIRST POUR APP ===== */
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  background: #f8fafc;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.App-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MEDIA QUERIES MOBILE ===== */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+  .App-logo {
+    height: 35vmin;
+  }
+}
+
+/* Téléphones portables (480px et moins) */
+@media screen and (max-width: 480px) {
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+  .App-logo {
+    height: 25vmin;
+  }
+}
+
+/* ===== ANIMATIONS MOBILE ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .App {
+    background: #1a1a1a;
+  }
 }

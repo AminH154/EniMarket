@@ -100,121 +100,226 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="login-page">
-            <div className="login-left">
-                <form onSubmit={handleSubmit} className={login ? "login-form" : "signup-form"}>
-                    <h1>{login ? "Login" : "Sign Up"}</h1>
-                    <div className="login-left-input">
-                        <div className="EmailInput">
-                            <label htmlFor="email">Email</label>
-                            <input 
-                                type="email" 
-                                id="email"
-                                name="email" 
-                                placeholder="Email" 
-                                value={formData.email} 
-                                onChange={handleChange} 
-                                className={error.email ? "error-input" : ""}
-                            />
-                            {error.email && <p className="ErreurMessage">{error.email}</p>}
-                        </div>
-                        
-                        <div className="passwordInput">
-                            <label htmlFor="password">Password</label>
-                            <input 
-                                type={showPassword ? "text" : "password"} 
-                                id="password"
-                                name="password" 
-                                placeholder="password" 
-                                value={formData.password} 
-                                onChange={handleChange}
-                                className={error.password ? "error-input" : ""}
-                            />
-                            {showPassword ? 
-                                <img src={assets.hide} alt="hide" onClick={() => setShowPassword(!showPassword)} className="eye" height={20} width={20} /> : 
-                                <img src={assets.eye} alt="eye" onClick={() => setShowPassword(!showPassword)} className="hide" height={20} width={20} />
-                            }
-                            {error.password && <p className="ErreurMessage">{error.password}</p>}
-                        </div>
-                    </div>
-
-                    <hr />
-                    <div className="login-assets">
-                        <img src={assets.logoGo} alt="google" />
-                        <img src={assets.facebook} alt="facebook" />
-                        <img src={assets.github} alt="github" />
-                    </div>
-
-                    {!login && (
-                        <div className="login-checkbox">
-                            <div className={`a ${error.privacy ? "error-checkbox" : ""}`}>
-                                <input 
-                                    type="checkbox" 
-                                    id="privacy"
-                                    name="privacy"
-                                    checked={checked.privacy}
-                                    onChange={handleCheckbox}
-                                />
-                                <label htmlFor="privacy">
-                                    j'accepte la <span>politique de confidentialité & cookies et les termes et conditions</span>
-                                </label>
-                                {error.privacy && <p className="ErreurMessage">{error.privacy}</p>}
-                            </div>
-                            <div className={`b ${error.offers ? "error-checkbox" : ""}`}>
-                                <input 
-                                    type="checkbox" 
-                                    id="offers"
-                                    name="offers"
-                                    checked={checked.offers}
-                                    onChange={handleCheckbox}
-                                />
-                                <label htmlFor="offers">
-                                    j'accepte de recevoir des offres exclusives et les dernières nouvelles de la marque
-                                </label>
-                                {error.offers && <p className="ErreurMessage">{error.offers}</p>}
-                            </div>
-                        </div>
-                    )}
-
-                    <button 
-                        type="submit"
-                    >
-                        {login ? "Login" : "Sign Up"}
-                    </button>
-
-                    <div className="signup-link">
-                        <p>
-                            {login ? "Vous n'avez pas de compte ? " : "Vous avez déjà un compte ? "}
-                            <span onClick={() => {
-                                setLogin(!login);
-                                setError({
-                                    email: "",
-                                    password: "",
-                                    privacy: "",
-                                    offers: ""
-                                });
-                                setFormData({
-                                    email: "",
-                                    password: ""
-                                });
-                                setChecked({
-                                    privacy: false,
-                                    offers: false
-                                });
-                            }}>
-                                {login ? "Sign Up" : "Login"}
-                            </span>
-                        </p>
-                    </div>
-                </form>
+        <div className="auth-page">
+            {/* Background avec animations */}
+            <div className="auth-background">
+                <div className="floating-shapes">
+                    <div className="shape shape-1"></div>
+                    <div className="shape shape-2"></div>
+                    <div className="shape shape-3"></div>
+                    <div className="shape shape-4"></div>
+                    <div className="shape shape-5"></div>
+                </div>
             </div>
-            <div className={`login-right ${login ? "login-mode" : "signup-mode"}`}>
-                <div className="login-right-box">
-                    <div className="login-right-box-img">
-                        <img src={assets.boutique} alt="login" />
-                        <div className="login-right-box-info">
-                            <h1>{login ? "WELCOME BACK" : "JOIN US"}</h1>
-                            <p>UniMarket est une plateforme web et mobile dediée aux etudiants</p>
+
+            <div className="auth-container">
+                {/* Section gauche - Formulaire */}
+                <div className="auth-form-section">
+                    <div className="auth-form-container">
+                        {/* Header avec logo */}
+                        <div className="auth-header">
+                            <div className="auth-logo">
+                                <span className="logo-icon">🛒</span>
+                                <h1>UniMarket</h1>
+                            </div>
+                            <p className="auth-subtitle">
+                                {login ? "Bienvenue de retour !" : "Rejoignez notre communauté"}
+                            </p>
+                        </div>
+
+                        {/* Formulaire */}
+                        <form onSubmit={handleSubmit} className="auth-form">
+                            <div className="form-group">
+                                <label htmlFor="email" className="form-label">
+                                    <span className="label-icon">📧</span>
+                                    Adresse email
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email"
+                                    name="email" 
+                                    placeholder="votre@email.com" 
+                                    value={formData.email} 
+                                    onChange={handleChange} 
+                                    className={`form-input ${error.email ? "error" : ""}`}
+                                />
+                                {error.email && <span className="error-message">{error.email}</span>}
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="password" className="form-label">
+                                    <span className="label-icon">🔒</span>
+                                    Mot de passe
+                                </label>
+                                <div className="password-input-container">
+                                    <input 
+                                        type={showPassword ? "text" : "password"} 
+                                        id="password"
+                                        name="password" 
+                                        placeholder="Votre mot de passe" 
+                                        value={formData.password} 
+                                        onChange={handleChange}
+                                        className={`form-input ${error.password ? "error" : ""}`}
+                                    />
+                                    <button 
+                                        type="button"
+                                        className="password-toggle"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                    >
+                                        {showPassword ? "🙈" : "👁️"}
+                                    </button>
+                                </div>
+                                {error.password && <span className="error-message">{error.password}</span>}
+                            </div>
+
+                            {/* Options supplémentaires pour Login */}
+                            {login && (
+                                <div className="form-options">
+                                    <label className="checkbox-container">
+                                        <input type="checkbox" />
+                                        <span className="checkmark"></span>
+                                        Se souvenir de moi
+                                    </label>
+                                    <Link to="/forgot-password" className="forgot-link">
+                                        Mot de passe oublié ?
+                                    </Link>
+                                </div>
+                            )}
+
+                            {/* Cases à cocher pour Sign Up */}
+                            {!login && (
+                                <div className="signup-checkboxes">
+                                    <div className={`checkbox-group ${error.privacy ? "error" : ""}`}>
+                                        <label className="checkbox-container">
+                                            <input 
+                                                type="checkbox" 
+                                                id="privacy"
+                                                name="privacy"
+                                                checked={checked.privacy}
+                                                onChange={handleCheckbox}
+                                            />
+                                            <span className="checkmark"></span>
+                                            J'accepte la <Link to="/privacy" className="link">politique de confidentialité</Link>
+                                        </label>
+                                        {error.privacy && <span className="error-message">{error.privacy}</span>}
+                                    </div>
+                                    
+                                    <div className={`checkbox-group ${error.offers ? "error" : ""}`}>
+                                        <label className="checkbox-container">
+                                            <input 
+                                                type="checkbox" 
+                                                id="offers"
+                                                name="offers"
+                                                checked={checked.offers}
+                                                onChange={handleCheckbox}
+                                            />
+                                            <span className="checkmark"></span>
+                                            Je souhaite recevoir les offres exclusives
+                                        </label>
+                                        {error.offers && <span className="error-message">{error.offers}</span>}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Bouton de soumission */}
+                            <button type="submit" className="auth-submit-btn">
+                                <span className="btn-text">
+                                    {login ? "Se connecter" : "Créer un compte"}
+                                </span>
+                                <span className="btn-icon">
+                                    {login ? "🚀" : "✨"}
+                                </span>
+                            </button>
+
+                            {/* Divider */}
+                            <div className="divider">
+                                <span>ou continuer avec</span>
+                            </div>
+
+                            {/* Boutons sociaux */}
+                            <div className="social-buttons">
+                                <button type="button" className="social-btn google-btn">
+                                    <img src={assets.logoGo} alt="Google" />
+                                    Google
+                                </button>
+                                <button type="button" className="social-btn facebook-btn">
+                                    <img src={assets.facebook} alt="Facebook" />
+                                    Facebook
+                                </button>
+                                <button type="button" className="social-btn github-btn">
+                                    <img src={assets.github} alt="GitHub" />
+                                    GitHub
+                                </button>
+                            </div>
+
+                            {/* Lien de basculement */}
+                            <div className="auth-switch">
+                                <p>
+                                    {login ? "Vous n'avez pas de compte ?" : "Vous avez déjà un compte ?"}
+                                    <button 
+                                        type="button"
+                                        className="switch-link"
+                                        onClick={() => {
+                                            setLogin(!login);
+                                            setError({
+                                                email: "",
+                                                password: "",
+                                                privacy: "",
+                                                offers: ""
+                                            });
+                                            setFormData({
+                                                email: "",
+                                                password: ""
+                                            });
+                                            setChecked({
+                                                privacy: false,
+                                                offers: false
+                                            });
+                                        }}
+                                    >
+                                        {login ? "Créer un compte" : "Se connecter"}
+                                    </button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                {/* Section droite - Image et informations */}
+                <div className="auth-info-section">
+                    <div className="auth-info-content">
+                        <div className="info-card">
+                            <div className="info-icon">
+                                {login ? "🎓" : "🌟"}
+                            </div>
+                            <h2>
+                                {login ? "Bienvenue de retour !" : "Rejoignez UniMarket"}
+                            </h2>
+                            <p>
+                                {login 
+                                    ? "Accédez à votre espace personnel et découvrez de nouvelles opportunités d'achat et de vente."
+                                    : "Rejoignez notre communauté d'étudiants et découvrez une nouvelle façon d'acheter et vendre vos articles."
+                                }
+                            </p>
+                            
+                            <div className="features-list">
+                                <div className="feature-item">
+                                    <span className="feature-icon">🛍️</span>
+                                    <span>Achetez et vendez facilement</span>
+                                </div>
+                                <div className="feature-item">
+                                    <span className="feature-icon">🔒</span>
+                                    <span>Transactions sécurisées</span>
+                                </div>
+                                <div className="feature-item">
+                                    <span className="feature-icon">👥</span>
+                                    <span>Communauté étudiante</span>
+                                </div>
+                                <div className="feature-item">
+                                    <span className="feature-icon">📱</span>
+                                    <span>Application mobile</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

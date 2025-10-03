@@ -1,17 +1,108 @@
-.ExploreItem h1{
+/* ===== DESIGN MOBILE-FIRST POUR EXPLOREITEM ===== */
+
+.ExploreItem {
+    margin-top: 20px;
+    background: #f8fafc;
+    padding: 20px 0;
+}
+
+.ExploreItem h1 {
     text-align: start;
     margin-left: 65px;
     font-size: 20px;
-}
-.ExploreItem{
-    margin-top: 20px;
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.ExploreItem_list{
+.ExploreItem_list {
     margin: 45px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(220px,0.5fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 0.5fr));
     margin-top: 30px;
-    row-gap: 1px;
-    ;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+/* ===== MEDIA QUERIES MOBILE ===== */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+    .ExploreItem {
+        margin-top: 15px;
+        padding: 15px 0;
+    }
+    
+    .ExploreItem h1 {
+        margin-left: 20px;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .ExploreItem_list {
+        margin: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Téléphones portables (480px et moins) */
+@media screen and (max-width: 480px) {
+    .ExploreItem {
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+    
+    .ExploreItem h1 {
+        margin-left: 15px;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .ExploreItem_list {
+        margin: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+    .ExploreItem h1 {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .ExploreItem_list {
+        margin: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+}
+
+/* ===== ANIMATIONS MOBILE ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ExploreItem_list > * {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .ExploreItem {
+        background: #1a1a1a;
+    }
+    
+    .ExploreItem h1 {
+        color: white;
+    }
 } 

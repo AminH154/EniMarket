@@ -19,24 +19,8 @@ html {
   scroll-behavior: smooth; /* Défilement fluide */
 }
 
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5; /* Zoom pour les écrans larges */
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
-}
-
+/* Suppression des règles de zoom qui causent des conflits */
+/* Les ajustements sont maintenant gérés dans index.css */
 
 ::-webkit-scrollbar {
   width: 1.3rem;
@@ -61,6 +45,7 @@ body {
   font-size: 1.6rem;
   background: var(--bg);
 }
+
 /* Conteneur principal */
 .container {
   max-width: 135rem;

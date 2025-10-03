@@ -1,3 +1,54 @@
-.home{
+/* ===== DESIGN MOBILE-FIRST POUR HOME ===== */
+
+.home {
     margin-top: 100px;
+    background: #f8fafc;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ===== MEDIA QUERIES MOBILE ===== */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+    .home {
+        margin-top: 120px;
+    }
+}
+
+/* Téléphones portables (480px et moins) */
+@media screen and (max-width: 480px) {
+    .home {
+        margin-top: 140px;
+    }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+    .home {
+        margin-top: 160px;
+    }
+}
+
+/* ===== ANIMATIONS MOBILE ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .home {
+        background: #1a1a1a;
+    }
 }

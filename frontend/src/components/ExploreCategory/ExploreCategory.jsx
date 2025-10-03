@@ -9,7 +9,10 @@ const ExploreCategory = () => {
       <div className="ExploreCategory_text">Explorez toutes les catégories</div>
       <div className="ExploreCategory_list">
         {List_category.map((item, index) => (
-          <div className="ExploreCategory_list_item" key={index}>
+          <div 
+            className={`ExploreCategory_list_item ${item.category_name === "projets" ? "projets" : ""}`} 
+            key={index}
+          >
             <Link to={`/filtreavance/${item.category_name}`}>
               <img
                 src={item.category_image}

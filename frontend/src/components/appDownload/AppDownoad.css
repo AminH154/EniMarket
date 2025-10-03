@@ -1,49 +1,166 @@
-.appdownload{
+/* ===== DESIGN MOBILE-FIRST POUR APPDOWNLOAD ===== */
+
+.appdownload {
     margin: auto auto;
     margin-top: 40px;
-    font-size : 40px;
+    font-size: 40px;
     text-align: center;
-    font-weight: 500 ;
+    font-weight: 500;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
 }
-.appdownload p{
-    animation: typing 6s steps(40, end) infinite; 
+
+.appdownload p {
+    animation: typing 6s steps(50, end) infinite;
     white-space: nowrap;
-    overflow: hidden; 
-    width: 0; 
-    animation: typing 6s steps(50, end) infinite; 
+    overflow: hidden;
+    width: 0;
+    margin: 0 auto;
+    color: #2d3748;
+    font-weight: 600;
 }
-
-
-
-
 
 .wave-container {
     position: relative;
     width: 100%;
-    height: 100px; /* Adjust height as needed */
+    height: 100px;
     overflow: hidden;
-  }
+}
+
 @keyframes typing {
     from {
-      width: 0;
+        width: 0;
     }
     to {
-      width: 100%;
+        width: 100%;
     }
-  }
-.app-download-platforms{
+}
+
+.app-download-platforms {
     height: 70px;
     display: flex;
-    gap: max(1vw,5px) ;
+    gap: max(1vw, 5px);
     justify-content: center;
     margin-top: 40px;
-    
-}
-.app-download-platforms{
     transition: 0.5s;
     cursor: pointer;
-
 }
-.app-download-platforms :hover{
+
+.app-download-platforms img {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-download-platforms img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MEDIA QUERIES MOBILE ===== */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+    .appdownload {
+        margin-top: 30px;
+        font-size: 32px;
+    }
+    
+    .appdownload p {
+        font-size: 28px;
+    }
+    
+    .app-download-platforms {
+        height: 60px;
+        margin-top: 30px;
+        gap: 15px;
+    }
+}
+
+/* Téléphones portables (480px et moins) */
+@media screen and (max-width: 480px) {
+    .appdownload {
+        margin-top: 25px;
+        font-size: 28px;
+    }
+    
+    .appdownload p {
+        font-size: 24px;
+    }
+    
+    .app-download-platforms {
+        height: 50px;
+        margin-top: 25px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .app-download-platforms img {
+        max-height: 100%;
+        width: auto;
+    }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+    .appdownload {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    
+    .appdownload p {
+        font-size: 20px;
+    }
+    
+    .app-download-platforms {
+        height: 45px;
+        margin-top: 20px;
+        gap: 8px;
+    }
+}
+
+/* ===== ANIMATIONS MOBILE ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.appdownload {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.app-download-platforms {
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 0.2s;
+}
+
+/* ===== TOUCH OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    .app-download-platforms img:hover {
+        transform: none;
+    }
+    
+    .app-download-platforms img:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .appdownload p {
+        color: #e2e8f0;
+    }
+    
+    .app-download-platforms img {
+        filter: brightness(0.9);
+    }
 }
